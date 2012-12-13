@@ -59,6 +59,9 @@ $(function(){
     var global_styles_name = $("input[name='global_styles_name']").val();
     var global_styles_description = $("input[name='global_styles_description']").val();
     var global_styles_weight = $("input[name='global_styles_weight']").val();
+    var toggle_logo = $("input[name='toggle_logo']").val();
+    var toggle_name = $("input[name='toggle_name']").val();
+    var toggle_slogan = $("input[name='toggle_slogan']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -69,12 +72,13 @@ $(function(){
     txt = txt + "css[global.css][name] = '"+global_styles_name+"'\n";
     txt = txt + "css[global.css][description] = '"+global_styles_description+"'\n";
     txt = txt + "css[global.css][options][weight] = '"+global_styles_weight+"'\n";
+    txt = txt + "settings[toggle_logo] = '"+toggle_logo+"'\n";
+    txt = txt + "settings[toggle_name] = '"+toggle_name+"'\n";
+    txt = txt + "settings[toggle_slogan] = '"+toggle_slogan+"'\n";
     
     
-    txt = txt + "scripts[] = 'js/global.js'\n";
-    txt = txt + "settings[toggle_logo] = '1'\n";
-    txt = txt + "settings[toggle_name] = '1'\n";
-    txt = txt + "settings[toggle_slogan] = '1'\n";
+    
+    
     txt = txt + "settings[toggle_node_user_picture] = '1'\n";
     txt = txt + "settings[toggle_comment_user_picture] = '1'\n";
     txt = txt + "settings[toggle_comment_user_verification] = '1'\n";
