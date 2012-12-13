@@ -83,6 +83,9 @@ $(function(){
     var toggle_node_user_picture = $("input[name='toggle_node_user_picture']").val();
     var toggle_comment_user_picture = $("input[name='toggle_comment_user_picture']").val();
     var toggle_comment_user_verification = $("input[name='toggle_comment_user_verification']").val();
+    var default_logo = $("input[name='default_logo']").val();
+    var logo_path = $("input[name='logo_path']").val();
+    var logo_upload = $("input[name='logo_upload']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -102,15 +105,15 @@ $(function(){
     txt = txt + "settings[toggle_favicon] = '"+toggle_favicon+"'\n";
     txt = txt + "settings[toggle_main_menu] = '"+toggle_main_menu+"'\n";
     txt = txt + "settings[toggle_secondary_menu] = '"+toggle_secondary_menu+"'\n";
+    txt = txt + "settings[default_logo] = '"+default_logo+"'\n";
+    txt = txt + "settings[logo_path] = '"+logo_path+"'\n";
+    txt = txt + "settings[logo_upload] = '"+logo_upload+"'\n";
     
     
     
     
     
     
-    txt = txt + "settings[default_logo] = '1'\n";
-    txt = txt + "settings[logo_path] = ''\n";
-    txt = txt + "settings[logo_upload] = ''\n";
     txt = txt + "settings[default_favicon] = '1'\n";
     txt = txt + "settings[favicon_path] = ''\n";
     txt = txt + "settings[favicon_upload] = ''\n";

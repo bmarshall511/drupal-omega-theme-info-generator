@@ -17,28 +17,28 @@
   <h2>Use the form below to build then generate your custom Omega child theme's .info file.</h2>
   <h3>Theme Settings</h3>
   <div class="standard-fields">
-    <div class="field">
+    <div class="field required">
   <label for="theme_name" data-description="The name of your theme." class="tooltip">Name</label>
   <input type="text" name="theme_name" id="theme_name">
   </div>
-  <div class="field">
+  <div class="field recommended">
   <label for="theme_description" data-description="The description of your theme." class="tooltip">Description</label>
   <input type="text" name="theme_description" id="theme_description">
   </div>
-  <div class="field">
-  <label for="core">Core</label>
+  <div class="field required">
+  <label for="core" data-description="The Drupal version that your theme is for. If for Drupal 6 this would be 6.x, Drupal 7 would be 7.x, etc. Themes cannot specify the specific version of a branch of Drupal. 6.x is correct 6.2 is not." class="tooltip">Core</label>
   <input type="text" name="core" id="core" value="7.x">
   </div>
-  <div class="field">
-  <label for="engine">Engine</label>
+  <div class="field required">
+  <label for="engine" data-description="The theme engine, which is used by the theme. If none is provided, the theme is assumed to be stand alone, i.e., implemented with a '.theme' file. Most themes should use 'phptemplate' as the default engine.<br><br>Note that in Drupal 7, this line is no longer necessary because PHPTemplate is assumed by default.<br><br><em>PHPTemplate's job is to discover theme functions and templates for the behavior of the theme. Omit this entry only if you know what you are doing.</em>" class="tooltip">Engine</label>
   <input type="text" name="engine" id="engine" value="phptemplate">
   </div>
   <div class="field">
-  <label for="screenshot">Screenshot</label>
+  <label for="screenshot" data-description="The optional screenshot key tells Drupal where to find the theme's thumbnail image, used on the theme selection page (admin/build/themes). If this key is omitted from the .info file, Drupal uses the 'screenshot.png' file in the theme's directory.<br><br>Use this key only if your thumbnail file is not called 'screenshot.png' or if you want to place it in a directory outside of your theme's base directory (e.g. screenshot = images/screenshot.png)." class="tooltip">Screenshot</label>
   <input type="text" name="screenshot" id="screenshot" value="screenshot.png">
   </div>
     <div class="field">
-      <label for="base_theme">Base Theme</label>
+      <label for="base_theme" data-description="Sub-themes can declare a base theme. This allows for theme inheritance, meaning the resources from the 'base theme' will cascade and be reused inside the sub-theme. Sub-themes can declare other sub-themes as their base, allowing multiple levels of inheritance. Use the internal 'machine' readable name of the base theme. The following is used in Minnelli, the sub-theme of Garland." class="tooltip">Base Theme</label>
       <input type="text" name="base_theme" id="base_theme" value="omega">
     </div>
     <div class="field">
@@ -71,7 +71,7 @@
     </div>
     <div class="field">
       <label for="toggle_comment_user_picture">Toggle Comment User Picture</label>
-      <input type="text" name="toggle_node_user_picture" id="toggle_comment_user_picture" value="1">
+      <input type="text" name="toggle_comment_user_picture" id="toggle_comment_user_picture" value="1">
     </div>
     <div class="field">
       <label for="toggle_comment_user_verification">Toggle Comment User Verification</label>
@@ -88,6 +88,18 @@
     <div class="field">
       <label for="toggle_secondary_menu">Toggle Secondary Menu</label>
       <input type="text" name="toggle_secondary_menu" id="toggle_secondary_menu" value="1">
+    </div>
+    <div class="field">
+      <label for="default_logo">Default Logo</label>
+      <input type="text" name="default_logo" id="default_logo" value="1">
+    </div>
+    <div class="field">
+      <label for="logo_path">Logo Path</label>
+      <input type="text" name="logo_path" id="logo_path">
+    </div>
+    <div class="field">
+      <label for="logo_upload">Logo Upload</label>
+      <input type="text" name="logo_upload" id="logo_upload">
     </div>
   </div>
   <hr>
