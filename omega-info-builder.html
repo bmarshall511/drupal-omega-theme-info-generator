@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Omega .info Theme Generator</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<style>
+body { font-family:Constantia,Georgia,'Nimbus Roman No9 L',serif; background: #fafafa }
+label { display: block; font-weight: bold; font-size: 11px; text-transform: uppercase; font-family:Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif; }
+hr{margin:20px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px dotted #e5e5e5}
+h1,h2,h3,h4,h5,h6{margin: 0 0 1em 0}
+h1,h3{color: #0678BE}
+h3{background:rgba(6,120,190,.1);padding:10px;}
+h2{font-style:italic;color:#ccc;font-weight:normal;padding:30px 50px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
+input[type='text'], select { border: 1px solid #e5e5e5; background: #f9f9f9; padding: 5px; margin-bottom: 5px; box-sizing: border-box; width: 100% }
+.standard-fields input[type='text'] { padding: 10px; }
+.standard-fields .field {float:left;width:31%;margin:0 1%}
+.standard-fields:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+textarea { font-family:'Courier New',Courier,'Nimbus Mono L',monospace; border: 1px solid #e5e5e5; background: #f9f9f9; padding: 10px; box-sizing: border-box; }
+ul { padding: 0; margin: 0; list-style-type: none;}
+li{ float: left; border: 1px solid #e5e5e5; padding: 3px; margin: 0 10px 10px 0; width: 24%; box-sizing: border-box; -moz-box-shadow: 0 0 1px #f0f0f0; -webkit-box-shadow: 0 0 1px #f0f0f0; box-shadow: 0 0 1px rgba(0,0,0,.5); }
+li .inner { border: 2px dashed #e5e5e5; }
+li .inner h4 { margin: 3px; background: #f0f0f0; color: #999; text-align: center; font-size: 14px; padding: 8px 5px; cursor: pointer; }
+li .inner .fields .field { float: left; width: 44%; margin: 0 3%; height: 44px}
+li .inner .fields:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.container { width:75%; margin: 0 auto; border: 1px solid #e5e5e5; padding: 20px; box-sizing: border-box; background: #fff; -moz-box-shadow: 0 0 1px #f0f0f0; -webkit-box-shadow: 0 0 1px #f0f0f0; box-shadow: 0 0 1px rgba(0,0,0,.5);}
+.clear{clear:both;}
+.fright{float:right;}
+.btn.fright{margin:6px 10px 0 0}
+.btn {
+  -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0b8fe1), color-stop(1, #0678BE) );
+  background:-moz-linear-gradient( center top, #0b8fe1 5%, #0678BE 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b8fe1', endColorstr='#0678BE');
+  background-color:#79bbff;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #84bbf3;
+  display:inline-block;
+  color:#ffffff;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #528ecc;
+}.btn:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0678BE), color-stop(1, #0b8fe1) );
+  background:-moz-linear-gradient( center top, #0678BE 5%, #0b8fe1 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0678BE', endColorstr='#0b8fe1');
+  background-color:#0678BE;
+}.btn:active {
+  position:relative;
+  top:1px;
+}
+.copyright{font-size:14px;color:#ccc}
+.copyright a{color:#999;text-decoration:none;}
+.copyright a:hover{color:#000;}
+.alert{padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+          color: #c09853;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:20px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Omega .info Theme Generator</h1>
+  <h2>Use the form below to build then generate your custom Omega child theme's .info file.</h2>
+  <h3>Theme Settings</h3>
+  <div class="standard-fields">
+    <div class="field">
+  <label for="theme_name">Name</label>
+  <input type="text" name="theme_name" id="theme_name">
+  </div>
+  <div class="field">
+  <label for="theme_description">Description</label>
+  <input type="text" name="theme_description" id="theme_description">
+  </div>
+  <div class="field">
+  <label for="core">Core</label>
+  <input type="text" name="core" id="core" value="7.x">
+  </div>
+  <div class="field">
+  <label for="engine">Engine</label>
+  <input type="text" name="engine" id="engine" value="phptemplate">
+  </div>
+  <div class="field">
+  <label for="screenshot">Screenshot</label>
+  <input type="text" name="screenshot" id="screenshot" value="screenshot.png">
+  </div>
+    <div class="field">
+      <label for="base_theme">Base Theme</label>
+      <input type="text" name="base_theme" id="base_theme" value="omega">
+    </div>
+    <div class="field">
+      <label for="global_styles_name">Global Styles Name</label>
+      <input type="text" name="global_styles_name" id="global_styles_name" value="Your custom global styles">
+    </div>
+    <div class="field">
+      <label for="global_styles_description">Global Styles Description</label>
+      <input type="text" name="global_styles_description" id="global_styles_description" value="This file holds all the globally active custom CSS of your theme.">
+    </div>
+    <div class="field">
+      <label for="global_styles_weight">Global Styles Weight</label>
+      <input type="text" name="global_styles_weight" id="global_styles_weight" value="10">
+    </div>
+  </div>
+  <hr>
+  <a href="#" class="remove-zone btn fright">Remove</a>
+  <a href="#" class="new-zone btn fright">Add</a>
+  <h3>Configure Zones</h3>
+  <ul id="zones">
+    <li id="zone-template">
+      <div class="inner">
+        <h4 class="box-title"><span>- Untitled -</span></h4>
+        <div class="fields">
+          <div class="field"><label>Zone Key</label>
+          <input type="text" value="" name="key" /></div>
+          <div class="field"><label>Zone Name</label>
+          <input type="text" value="" name="name" class="box-name" /></div>
+          <div class="field"><label>Wrapper</label>
+          <input type="text" value="0" name="wrapper" /></div>
+          <div class="field"><label>Order</label>
+          <input type="text" value="0" name="order" /></div>
+          <div class="field"><label>Force Display</label>
+          <input type="text" value="1" name="display" /></div>
+          <div class="field"><label>Section</label>
+          <select name="section">
+            <option value="header">Header</option>
+            <option value="content">Content</option>
+            <option value="footer">Footer</option>
+          </select></div>
+          <div class="field"><label>Weight</label>
+          <input type="text" value="" name="weight" /></div>
+          <div class="field"><label>Columns</label>
+          <input type="text" value="" name="columns" /></div>
+          <div class="field"><label>Primary</label>
+          <input type="text" value="" name="primary" /></div>
+          <div class="field"><label>CSS</label>
+          <input type="text" value="" name="css" /></div>
+          <div class="field"><label>Wrapper CSS</label>
+          <input type="text" value="" name="wrapper_css" /></div>
+          <div class="field"><label>= Height Con.</label>
+          <input type="text" value="0" name="equal_height_container" /></div>
+        </div>
+      </div>
+  </ul>
+  <div class="clear"></div>
+  <hr>
+  <a href="#" class="remove-region btn fright">Remove</a>
+  <a href="#" class="new-region btn fright">Add</a>
+  <h3>Configure Regions</h3>
+  <ul id="regions">
+    <li id="region-template">
+      <div class="inner">
+        <h4 class="box-title"><span>- Untitled -</span></h4>
+        <div class="fields">
+          <div class="field"><label>Region Key</label>
+          <input type="text" value="" name="key" /></div>
+          <div class="field"><label>Region Name</label>
+          <input type="text" value="" name="name" class="box-name"></div>
+          <div class="field"><label>Force Display</label>
+          <input type="text" value="" name="display" /></div>
+          <div class="field"><label>Zone Key</label>
+          <input type="text" value="" name="zone" /></div>
+          <div class="field"><label>Prefix</label>
+          <input type="text" value="0" name="prefix" /></div>
+          <div class="field"><label>Suffix</label>
+          <input type="text" value="0" name="suffix" /></div>
+          <div class="field"><label>Position</label>
+          <input type="text" value="0" name="position" /></div>
+          <div class="field"><label>Columns</label>
+          <input type="text" value="" name="columns" /></div>
+          <div class="field"><label>Weight</label>
+          <input type="text" value="" name="weight" /></div>
+          <div class="field"><label>CSS</label>
+          <input type="text" value="" name="css" /></div>
+          <div class="field"><label>= Height Ele.</label>
+          <input type="text" value="0" name="equal_height_element" /></div>
+          <div class="field"><label>= Height Con.</label>
+          <input type="text" value="0" name="equal_height_container" /></div>
+        </div>
+      </div>
+  </ul>
+  <div class="clear"></div>
+  <hr>
+  <a href="#" class="generate btn fright">Generate</a>
+  <h3>Theme .info File</h3>
+  <div class="alert"><strong>Notice:</strong> Not all Omega theme settings are currently available to edit using this interface, however those settings are included and set to their defaults in the generated code.</div>
+  <p>Click the 'Generate' button to view your theme's .info file built based on the options above. Copy and paste this content in your Omega theme's .info file.</p>
+  <textarea id="output" style="width:100%; height: 400px;"></textarea>
+  <p class="copyright">Built by <a href="http://www.benmarshall.me">Ben Marshall</a>.</p>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/html5-boilerplate/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+<script>
+$(function(){
+  $('.new-zone').live('click',function(e) {
+    e.preventDefault();
+    var html = $('#zones li:last-child').html();
+    $("#zones li:last-child h4").click();
+    $("#zones").append('<li>'+html);
+    $("#zones li:last-child h4").html('<span>- Untitled -</span>');
+  });
+  $('.new-region').live('click',function(e) {
+    e.preventDefault();
+    var html = $('#regions li:last-child').html();
+    $("#regions li:last-child h4").click();
+    $("#regions").append('<li>'+html);
+    $("#regions li:last-child h4").html('<span>- Untitled -</span>');
+  });
+
+  $('.remove-region').live('click',function(e) {
+    e.preventDefault();
+    var count = $("#regions li").length;
+    if(count > 1) {
+       $("#regions li:last-child").slideUp('fast', function(){
+        $(this).remove();
+        $("#regions li:last-child h4").click();
+      });
+    }
+  });
+  $('.remove-zone').live('click',function(e) {
+    e.preventDefault();
+    var count = $("#zones li").length;
+    if(count > 1) {
+      $("#zones li:last-child").slideUp('fast', function(){
+        $(this).remove();
+        $("#zones li:last-child h4").click();
+      });
+    }
+  });
+  $(".box-name").live('keyup',function(){
+    var value = $(this).val();
+    var element = $(this).parent().parent();
+    if(value == '' || value == 'undefined') {
+      $('h4',element).html('<span>- Undefined -</span>');
+    } else {
+      $('h4',element).text(value);
+    }
+  });
+  $('.box-title').live('click', function() {
+    $('.fields',$(this).parent()).slideToggle();
+  });
+  $('.generate').live('click',function(e) {
+    e.preventDefault();
+    var txt = '';
+    
+    var theme_name = $("input[name='theme_name']").val();
+    var theme_description = $("input[name='theme_description']").val();
+    var core = $("input[name='core']").val();
+    var engine = $("input[name='engine']").val();
+    var screenshot = $("input[name='screenshot']").val();
+    var base_theme = $("input[name='base_theme']").val();
+    var global_styles_name = $("input[name='global_styles_name']").val();
+    var global_styles_description = $("input[name='global_styles_description']").val();
+    var global_styles_weight = $("input[name='global_styles_weight']").val();
+    
+    txt = txt + "name = '"+theme_name+"'\n";
+    txt = txt + "description = '"+theme_description+"'\n";
+    txt = txt + "core = '"+core+"'\n";
+    txt = txt + "engine = '"+engine+"'\n";
+    txt = txt + "sceenshot = '"+screenshot+"'\n";
+    txt = txt + "base theme = '"+base_theme+"'\n";
+    txt = txt + "css[global.css][name] = '"+global_styles_name+"'\n";
+    txt = txt + "css[global.css][description] = '"+global_styles_description+"'\n";
+    txt = txt + "css[global.css][options][weight] = '"+global_styles_weight+"'\n";
+    
+    
+    txt = txt + "scripts[] = 'js/global.js'\n";
+    txt = txt + "settings[toggle_logo] = '1'\n";
+    txt = txt + "settings[toggle_name] = '1'\n";
+    txt = txt + "settings[toggle_slogan] = '1'\n";
+    txt = txt + "settings[toggle_node_user_picture] = '1'\n";
+    txt = txt + "settings[toggle_comment_user_picture] = '1'\n";
+    txt = txt + "settings[toggle_comment_user_verification] = '1'\n";
+    txt = txt + "settings[toggle_favicon] = '1'\n";
+    txt = txt + "settings[toggle_main_menu] = '1'\n";
+    txt = txt + "settings[toggle_secondary_menu] = '1'\n";
+    txt = txt + "settings[default_logo] = '1'\n";
+    txt = txt + "settings[logo_path] = ''\n";
+    txt = txt + "settings[logo_upload] = ''\n";
+    txt = txt + "settings[default_favicon] = '1'\n";
+    txt = txt + "settings[favicon_path] = ''\n";
+    txt = txt + "settings[favicon_upload] = ''\n";
+    txt = txt + "settings[alpha_grid] = 'alpha_default'\n";
+    txt = txt + "settings[alpha_responsive] = '1'\n";
+    txt = txt + "settings[alpha_viewport] = '1'\n";
+    txt = txt + "settings[alpha_viewport_initial_scale] = '1'\n";
+    txt = txt + "settings[alpha_viewport_min_scale] = '1'\n";
+    txt = txt + "settings[alpha_viewport_max_scale] = '1'\n";
+    txt = txt + "settings[alpha_viewport_user_scaleable] = '0'\n";
+    txt = txt + "settings[alpha_primary_alpha_default] = 'normal'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_narrow_responsive] = '1'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_narrow_weight] = '1'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_narrow_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_normal_responsive] = '1'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_normal_weight] = '2'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_normal_media] = 'all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_fluid_responsive] = '0'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_fluid_weight] = '0'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_fluid_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_wide_responsive] = '0'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_wide_weight] = '3'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_wide_media] = 'all and (min-width: 1220px)'\n";
+    txt = txt + "settings[alpha_primary_alpha_fluid] = 'normal'\n";
+    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_responsive] = '0'\n";
+    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_weight] = '0'\n";
+    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'\n";
+    txt = txt + "settings[alpha_libraries][omega_formalize] = 'omega_formalize'\n";
+    txt = txt + "settings[alpha_libraries][omega_mediaqueries] = 'omega_mediaqueries'\n";
+    txt = txt + "settings[alpha_libraries][omega_equalheights] = '0'\n";
+    txt = txt + "settings[alpha_css][alpha-reset.css] = 'alpha-reset.css'\n";
+    txt = txt + "settings[alpha_css][alpha-mobile.css] = 'alpha-mobile.css'\n";
+    txt = txt + "settings[alpha_css][alpha-alpha.css] = 'alpha-alpha.css'\n";
+    txt = txt + "settings[alpha_css][omega-menu.css] = 'omega-menu.css'\n";
+    txt = txt + "settings[alpha_css][omega-forms.css] = 'omega-forms.css'\n";
+    txt = txt + "settings[alpha_css][omega-visuals.css] = 'omega-visuals.css'\n";
+    txt = txt + "settings[alpha_css][global.css] = 'global.css'\n";
+    txt = txt + "settings[alpha_css][omega-text.css] = '0'\n";
+    txt = txt + "settings[alpha_css][omega-branding.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][profiles/openpublish/modules/contrib/date/date_api/date.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/field/theme/field.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][sites/all/modules/contrib/logintoboggan/logintoboggan.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/node/node.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/search/search.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/user/user.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][sites/all/modules/contrib/views/css/views.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][misc/vertical-tabs.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/aggregator/aggregator.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/block/block.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/dblog/dblog.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/file/file.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/filter/filter.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/help/help.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/menu/menu.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/openid/openid.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/profile/profile.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/statistics/statistics.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/syslog/syslog.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/admin.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/maintenance.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/system.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/system.admin.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/system.base.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/system.maintenance.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/system.menus.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/system.messages.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/system/system.theme.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/taxonomy/taxonomy.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/tracker/tracker.css] = '0'\n";
+    txt = txt + "settings[alpha_exclude][modules/update/update.css] = '0'\n";
+    txt = txt + "settings[alpha_debug_block_toggle] = '1'\n";
+    txt = txt + "settings[alpha_debug_block_active] = '1'\n";
+    txt = txt + "settings[alpha_debug_grid_toggle] = '1'\n";
+    txt = txt + "settings[alpha_debug_grid_active] = '1'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][2] = '2'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][3] = '3'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][1] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][8] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][6] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][4] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][5] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][10] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][9] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][7] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][11] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][12] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][13] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][15] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][14] = '0'\n";
+    txt = txt + "settings[alpha_debug_grid_roles][16] = '0'\n";
+    txt = txt + "settings[alpha_toggle_messages] = '1'\n";
+    txt = txt + "settings[alpha_toggle_action_links] = '1'\n";
+    txt = txt + "settings[alpha_toggle_tabs] = '1'\n";
+    txt = txt + "settings[alpha_toggle_breadcrumb] = '1'\n";
+    txt = txt + "settings[alpha_toggle_page_title] = '1'\n";
+    txt = txt + "settings[alpha_toggle_feed_icons] = '1'\n";
+    txt = txt + "settings[alpha_hidden_title] = '0'\n";
+    txt = txt + "settings[alpha_hidden_site_name] = '0'\n";
+    txt = txt + "settings[alpha_hidden_site_slogan] = '0'\n";
+    
+    $('#zones li').each(function() {
+      var key = $("input[name='key']", this).val();
+      var name = $("input[name='name']", this).val();
+      var display = $("input[name='display']", this).val();
+      var section = $("select[name='section']", this).val();
+      var weight = $("input[name='weight']", this).val();
+      var columns = $("input[name='columns']", this).val();
+      var wrapper = $("input[name='wrapper']", this).val();
+      var order = $("input[name='order']", this).val();
+      var primary = $("input[name='primary']", this).val();
+      var css = $("input[name='css']", this).val();
+      var wrapper_css = $("input[name='wrapper_css']", this).val();
+      var equal_height_container = $("input[name='equal_height_container']", this).val();
+      
+      txt = txt + "zones["+key+"] = '"+name+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_wrapper] = '"+wrapper+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_force] = '"+display+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_order] = '"+order+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_section] = '"+section+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_weight] = '"+weight+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_columns] = '"+columns+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_primary] = '"+primary+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_css] = '"+css+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_wrapper_css] = '"+wrapper_css+"'\n";
+      txt = txt + "settings[alpha_zone_"+key+"_equal_height_container] = '"+equal_height_container+"'\n";
+      
+    });
+    
+    $('#regions li').each(function() {
+      var key = $("input[name='key']", this).val();
+      var name = $("input[name='name']", this).val();
+      var display = $("input[name='display']", this).val();
+      var zone = $("input[name='zone']", this).val();
+      var columns = $("input[name='columns']", this).val();
+      var weight = $("input[name='weight']", this).val();
+      var prefix = $("input[name='prefix']", this).val();
+      var suffix = $("input[name='suffix']", this).val();
+      var position = $("input[name='position']", this).val();
+      var css = $("input[name='css']", this).val();
+      var equal_height_element = $("input[name='equal_height_element']", this).val();
+      var equal_height_container = $("input[name='equal_height_container']", this).val();
+      
+      txt = txt + "regions["+key+"] = '"+name+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_force] = '"+display+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_zone] = '"+zone+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_prefix] = '"+prefix+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_columns] = '"+columns+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_suffix] = '"+suffix+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_weight] = '"+weight+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_position] = '"+position+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_css] = '"+css+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_equal_height_element] = '"+equal_height_element+"'\n";
+      txt = txt + "settings[alpha_region_"+key+"_equal_height_container] = '"+equal_height_container+"'\n";
+    });
+    $('#output').val(txt);
+  });
+});
+</script>
+</body>
+</html>
