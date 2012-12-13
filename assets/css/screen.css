@@ -75,4 +75,4 @@ li .inner .fields:after {
           border-radius: 4px;
           color: #c09853;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:20px}
 .tt{display:block;position:absolute;z-index:999;top:-35px;left:0;padding:10px;background:#f0f0f0;color:#0678BE;font-weight:normal;text-transform:none;-moz-box-shadow: 0 0 2px rgba(0,0,0,.5); -webkit-box-shadow: 0 0 2px rgba(0,0,0,.5); box-shadow: 0 0 2px rgba(0,0,0,.5)}
-li .inner .tt {top:0;width:196%}
+li .inner .tt {top:5px;left:5px;width:296%}
