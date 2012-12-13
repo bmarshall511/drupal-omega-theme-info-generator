@@ -109,6 +109,9 @@ $(function(){
     var alpha_layouts_alpha_default_fluid_responsive = $("input[name='alpha_layouts_alpha_default_fluid_responsive']").val();
     var alpha_layouts_alpha_default_fluid_weight = $("select[name='alpha_layouts_alpha_default_fluid_weight']").val();
     var alpha_layouts_alpha_default_fluid_media = $("input[name='alpha_layouts_alpha_default_fluid_media']").val();
+    var alpha_layouts_alpha_default_wide_responsive = $("input[name='alpha_layouts_alpha_default_wide_responsive']").val();
+    var alpha_layouts_alpha_default_wide_weight = $("select[name='alpha_layouts_alpha_default_wide_weight']").val();
+    var alpha_layouts_alpha_default_wide_media = $("input[name='alpha_layouts_alpha_default_wide_media']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -151,15 +154,15 @@ $(function(){
     txt = txt + "settings[alpha_layouts_alpha_default_fluid_responsive] = '"+alpha_layouts_alpha_default_fluid_responsive+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_fluid_weight] = '"+alpha_layouts_alpha_default_fluid_weight+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_fluid_media] = '"+alpha_layouts_alpha_default_fluid_media+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_wide_responsive] = '"+alpha_layouts_alpha_default_wide_responsive+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_wide_weight] = '"+alpha_layouts_alpha_default_wide_weight+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_wide_media] = '"+alpha_layouts_alpha_default_wide_media+"'\n";
     
     
     
     
     
     
-    txt = txt + "settings[alpha_layouts_alpha_default_wide_responsive] = '0'\n";
-    txt = txt + "settings[alpha_layouts_alpha_default_wide_weight] = '3'\n";
-    txt = txt + "settings[alpha_layouts_alpha_default_wide_media] = 'all and (min-width: 1220px)'\n";
     txt = txt + "settings[alpha_primary_alpha_fluid] = 'normal'\n";
     txt = txt + "settings[alpha_layouts_alpha_fluid_normal_responsive] = '0'\n";
     txt = txt + "settings[alpha_layouts_alpha_fluid_normal_weight] = '0'\n";
