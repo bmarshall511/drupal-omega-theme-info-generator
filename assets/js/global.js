@@ -1,4 +1,13 @@
 $(function(){
+  $('.tooltip').hover(function() {
+    var txt = $(this).attr('data-description');
+    $(this).append('<span class="tt">'+txt+'</span>').fadeIn();
+  }, function(){
+    $('.tt',this).fadeOut(function(){
+      $('.tt',this).remove();
+    });
+  });
+  
   $('.new-zone').live('click',function(e) {
     e.preventDefault();
     var html = $('#zones li:last-child').html();

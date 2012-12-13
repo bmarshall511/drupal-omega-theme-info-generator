@@ -18,11 +18,11 @@
   <h3>Theme Settings</h3>
   <div class="standard-fields">
     <div class="field">
-  <label for="theme_name">Name</label>
+  <label for="theme_name" data-description="The name of your theme." class="tooltip">Name</label>
   <input type="text" name="theme_name" id="theme_name">
   </div>
   <div class="field">
-  <label for="theme_description">Description</label>
+  <label for="theme_description" data-description="The description of your theme." class="tooltip">Description</label>
   <input type="text" name="theme_description" id="theme_description">
   </div>
   <div class="field">
@@ -75,31 +75,31 @@
       <div class="inner">
         <h4 class="box-title"><span>- Untitled -</span></h4>
         <div class="fields">
-          <div class="field"><label>Zone Key</label>
+          <div class="field"><label class="tooltip" data-description="Enter the zone's unique key value.">Zone Key</label>
           <input type="text" value="" name="key" /></div>
-          <div class="field"><label>Zone Name</label>
+          <div class="field"><label class="tooltip" data-description="Enter the zone's name.">Zone Name</label>
           <input type="text" value="" name="name" class="box-name" /></div>
-          <div class="field"><label>Wrapper</label>
+          <div class="field"><label class="tooltip" data-description="Enabling this feature will give a wrapper around the zone itself, allowing you to theme in elements that appear outside the 960 pixel container zone.">Wrapper</label>
           <input type="text" value="0" name="wrapper" /></div>
           <div class="field"><label>Order</label>
           <input type="text" value="0" name="order" /></div>
-          <div class="field"><label>Force Display</label>
+          <div class="field"><label class="tooltip" data-description="Enabling this will always render this zone, even if it is empty.">Force Display</label>
           <input type="text" value="1" name="display" /></div>
-          <div class="field"><label>Section</label>
+          <div class="field"><label class="tooltip" data-description="Defines which section a zone will be in. To move a zone to a different section, choose the desired section name.">Section</label>
           <select name="section">
             <option value="header">Header</option>
             <option value="content">Content</option>
             <option value="footer">Footer</option>
           </select></div>
-          <div class="field"><label>Weight</label>
+          <div class="field"><label class="tooltip" data-description="Defines where the zone will be placed within the section. To move a zone, choose a new weight. Zones are ordered from lowest number to highest.">Weight</label>
           <input type="text" value="" name="weight" /></div>
-          <div class="field"><label>Columns</label>
+          <div class="field"><label class="tooltip" data-description="Choose the desired number of columns for the zone. Default options are 12, 16, and 24. Each zone defines its own column count, which means you can use a different number of columns for each zone on the page.">Columns</label>
           <input type="text" value="" name="columns" /></div>
-          <div class="field"><label>Primary</label>
+          <div class="field"><label class="tooltip" data-description="Defines which region within the zone should appear first in the source code and expand to fill empty space if other regions in that zone are empty.">Primary</label>
           <input type="text" value="" name="primary" /></div>
-          <div class="field"><label>CSS</label>
+          <div class="field"><label class="tooltip" data-description="Enter any CSS classes to be added to the zone for theming.">CSS</label>
           <input type="text" value="" name="css" /></div>
-          <div class="field"><label>Wrapper CSS</label>
+          <div class="field"><label class="tooltip" data-description="Enter any CSS classes to be added to the zone wrapper for theming. This will only be used if the option to provide a full width wrapper around the zone is enabled.">Wrapper CSS</label>
           <input type="text" value="" name="wrapper_css" /></div>
           <div class="field"><label>= Height Con.</label>
           <input type="text" value="0" name="equal_height_container" /></div>
