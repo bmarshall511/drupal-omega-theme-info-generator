@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-  <h1>Omega .info Theme Generator</h1>
+  <h1>Omega Theme .info Generator</h1>
   <h2>Use the form below to build then generate your custom Omega child theme's .info file.</h2>
   <h3>Theme Settings</h3>
   <div class="standard-fields">
@@ -299,6 +299,42 @@
     <div class="field">
       <label for="alpha_layouts_alpha_default_normal_media" data-description="The @media query that the Normal layout should respond to." class="tooltip">Media Query</label>
       <input type="text" name="alpha_layouts_alpha_default_normal_media" id="alpha_layouts_alpha_default_normal_media" value="all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">
+    </div>
+    <div class="clear"></div>
+    <h6>Fluid Layout</h6>
+    <div class="field">
+      <label for="alpha_layouts_alpha_default_fluid_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
+      <input type="text" name="alpha_layouts_alpha_default_fluid_responsive" id="alpha_layouts_alpha_default_fluid_responsive" value="0">
+    </div>
+    <div class="field">
+      <label for="alpha_layouts_alpha_default_fluid_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
+      <select name="alpha_layouts_alpha_default_fluid_weight" id="alpha_layouts_alpha_default_fluid_weight">
+        <option value="-10">-10</option>
+        <option value="-9">-9</option>
+        <option value="-8">-8</option>
+        <option value="-7">-7</option>
+        <option value="-6">-6</option>
+        <option value="-5">-5</option>
+        <option value="-4">-4</option>
+        <option value="-3">-3</option>
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="0" selected="selected">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="alpha_layouts_alpha_default_fluid_media" data-description="The @media query that the Fluid layout should respond to." class="tooltip">Media Query</label>
+      <input type="text" name="alpha_layouts_alpha_default_fluid_media" id="alpha_layouts_alpha_default_fluid_media" value="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
     </div>
   </div>
   <hr>

@@ -106,6 +106,9 @@ $(function(){
     var alpha_layouts_alpha_default_normal_responsive = $("input[name='alpha_layouts_alpha_default_normal_responsive']").val();
     var alpha_layouts_alpha_default_normal_weight = $("select[name='alpha_layouts_alpha_default_normal_weight']").val();
     var alpha_layouts_alpha_default_normal_media = $("input[name='alpha_layouts_alpha_default_normal_media']").val();
+    var alpha_layouts_alpha_default_fluid_responsive = $("input[name='alpha_layouts_alpha_default_fluid_responsive']").val();
+    var alpha_layouts_alpha_default_fluid_weight = $("select[name='alpha_layouts_alpha_default_fluid_weight']").val();
+    var alpha_layouts_alpha_default_fluid_media = $("input[name='alpha_layouts_alpha_default_fluid_media']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -145,15 +148,15 @@ $(function(){
     txt = txt + "settings[alpha_layouts_alpha_default_normal_responsive] = '"+alpha_layouts_alpha_default_normal_responsive+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_normal_weight] = '"+alpha_layouts_alpha_default_normal_weight+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_normal_media] = '"+alpha_layouts_alpha_default_normal_media+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_fluid_responsive] = '"+alpha_layouts_alpha_default_fluid_responsive+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_fluid_weight] = '"+alpha_layouts_alpha_default_fluid_weight+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_fluid_media] = '"+alpha_layouts_alpha_default_fluid_media+"'\n";
     
     
     
     
     
     
-    txt = txt + "settings[alpha_layouts_alpha_default_fluid_responsive] = '0'\n";
-    txt = txt + "settings[alpha_layouts_alpha_default_fluid_weight] = '0'\n";
-    txt = txt + "settings[alpha_layouts_alpha_default_fluid_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_wide_responsive] = '0'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_wide_weight] = '3'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_wide_media] = 'all and (min-width: 1220px)'\n";
