@@ -99,6 +99,10 @@ $(function(){
     var alpha_viewport_min_scale = $("select[name='alpha_viewport_min_scale']").val();
     var alpha_viewport_max_scale = $("select[name='alpha_viewport_max_scale']").val();
     var alpha_viewport_user_scaleable = $("input[name='alpha_viewport_user_scaleable']").val();
+    var alpha_primary_alpha_default = $("select[name='alpha_primary_alpha_default']").val();
+    var alpha_layouts_alpha_default_narrow_responsive = $("input[name='alpha_layouts_alpha_default_narrow_responsive']").val();
+    var alpha_layouts_alpha_default_narrow_weight = $("select[name='alpha_layouts_alpha_default_narrow_weight']").val();
+    var alpha_layouts_alpha_default_narrow_media = $("input[name='alpha_layouts_alpha_default_narrow_media']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -131,16 +135,16 @@ $(function(){
     txt = txt + "settings[alpha_viewport_min_scale] = '"+alpha_viewport_min_scale+"'\n";
     txt = txt + "settings[alpha_viewport_max_scale] = '"+alpha_viewport_max_scale+"'\n";
     txt = txt + "settings[alpha_viewport_user_scaleable] = '"+alpha_viewport_user_scaleable+"'\n";
+    txt = txt + "settings[alpha_primary_alpha_default] = '"+alpha_primary_alpha_default+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_narrow_responsive] = '"+alpha_layouts_alpha_default_narrow_responsive+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_narrow_weight] = '"+alpha_layouts_alpha_default_narrow_weight+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_default_narrow_media] = '"+alpha_layouts_alpha_default_narrow_media+"'\n";
     
     
     
     
     
     
-    txt = txt + "settings[alpha_primary_alpha_default] = 'normal'\n";
-    txt = txt + "settings[alpha_layouts_alpha_default_narrow_responsive] = '1'\n";
-    txt = txt + "settings[alpha_layouts_alpha_default_narrow_weight] = '1'\n";
-    txt = txt + "settings[alpha_layouts_alpha_default_narrow_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_normal_responsive] = '1'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_normal_weight] = '2'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_normal_media] = 'all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)'\n";

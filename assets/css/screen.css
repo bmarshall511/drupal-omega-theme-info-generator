@@ -7,8 +7,9 @@ h1,h3,h4,h5{color: #0678BE}
 a{text-decoration:none;color:#004975}
 a:hover{text-decoration:underline}
 h3{background:rgba(6,120,190,.1);padding:10px;}
-h4,h5{border-bottom:1px solid #ccc;margin:1em 0}
-h5{border-bottom:1px dotted #ccc;color:#424242}
+h4,h5,h6{border-bottom:2px solid #ccc;margin:1em 0}
+h5,h6{border-bottom:1px solid #ccc;color:#424242}
+h6{border-bottom:1px dotted #ccc;}
 h2{font-style:italic;color:#ccc;font-weight:normal;padding:30px 50px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;text-align:center}
 input[type='text'], select { border: 1px solid #e5e5e5; background: #f9f9f9; padding: 5px; margin-bottom: 5px; box-sizing: border-box; width: 100% }
 .standard-fields input[type='text'] { padding: 10px; }

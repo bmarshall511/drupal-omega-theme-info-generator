@@ -136,11 +136,13 @@
       <input type="text" name="alpha_responsive" id="alpha_responsive" value="1">
     </div>
     <div class="field">
-      <label for="alpha_viewport" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Alpha Viewpoint</label>
+      <label for="alpha_viewport" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Allow customizing viewport on iOS &amp; Android</label>
       <input type="text" name="alpha_viewport" id="alpha_viewport" value="1">
     </div>
+    <div class="clear"></div>
+    <h6>Viewport Settings</h6>
     <div class="field">
-      <label for="alpha_viewport_initial_scale" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Alpha Viewpoint Initial Scale</label>
+      <label for="alpha_viewport_initial_scale" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Initial Scale</label>
       <select name="alpha_viewport_initial_scale" id="alpha_viewport_initial_scale">
         <option value="1" selected="selected">1.0</option>
         <option value="1.5">1.5</option>
@@ -164,7 +166,7 @@
       </select>
     </div>
     <div class="field">
-      <label for="alpha_viewport_min_scale" data-description="The minimum scaling of the site. This should usually be the same as your <em>Initial scale</em> setting." class="tooltip">Alpha Viewpoint Minimum Scale</label>
+      <label for="alpha_viewport_min_scale" data-description="The minimum scaling of the site. This should usually be the same as your <em>Initial scale</em> setting." class="tooltip">Minimum Scale</label>
       <select name="alpha_viewport_min_scale" id="alpha_viewport_min_scale">
         <option value="1" selected="selected">1.0</option>
         <option value="1.5">1.5</option>
@@ -188,7 +190,7 @@
       </select>
     </div>
     <div class="field">
-      <label for="alpha_viewport_max_scale" data-description="The maximum scaling of the site. This can be any value between 1 and 10, but should not be too big if you want to preserve your mobile look and feel." class="tooltip">Alpha Viewpoint Maximum Scale</label>
+      <label for="alpha_viewport_max_scale" data-description="The maximum scaling of the site. This can be any value between 1 and 10, but should not be too big if you want to preserve your mobile look and feel." class="tooltip">Maximum Scale</label>
       <select name="alpha_viewport_max_scale" id="alpha_viewport_max_scale">
         <option value="1" selected="selected">1.0</option>
         <option value="1.5">1.5</option>
@@ -212,8 +214,55 @@
       </select>
     </div>
     <div class="field">
-      <label for="alpha_viewport_user_scaleable">Alpha Viewport User Scaleable</label>
+      <label for="alpha_viewport_user_scaleable" data-description="Determine if a user can resize the screen. This is usually accomplished via multi-touch gestures on iOS and Android devices. If your mobile theme is very customized and presented with good typography and graphics for a reduced mobile size, it is recommended to leave this setting unchecked. If it is left unchecked, the min-scale and max-scale properties will be ignored.<br><br>HTC Android devices do NOT (currently) respect the viewport meta tag for <code>user-scalable</code>. It will render at the appropriate <code>initial-scale</code> set above, but a user can still zoom in/out." class="tooltip">Scalable by User</label>
       <input type="text" name="alpha_viewport_user_scaleable" id="alpha_viewport_user_scaleable" value="0">
+    </div>
+    <div class="clear"></div>
+    <h5>Default (960px) Layout Settings</h5>
+    <div class="field">
+      <label for="alpha_primary_alpha_default" data-description="The primary layout will be used in case you disable the 'responsive grid' option as well as for older versions of Internet Explorer." class="tooltip">Primary Layout</label>
+      <select name="alpha_primary_alpha_default" id="alpha_primary_alpha_default">
+        <option value="narrow">Narrow</option>
+        <option value="normal" selected="selected">Normal</option>
+        <option value="fluid">Fluid</option>
+        <option value="wide">Wide</option>
+      </select>
+    </div>
+    <div class="clear"></div>
+    <h6>Narrow Layout</h6>
+    <div class="field">
+      <label for="alpha_layouts_alpha_default_narrow_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
+      <input type="text" name="alpha_layouts_alpha_default_narrow_responsive" id="alpha_layouts_alpha_default_narrow_responsive" value="1">
+    </div>
+    <div class="field">
+      <label for="alpha_layouts_alpha_default_narrow_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
+      <select name="alpha_layouts_alpha_default_narrow_weight" id="alpha_layouts_alpha_default_narrow_weight">
+        <option value="-10">-10</option>
+        <option value="-9">-9</option>
+        <option value="-8">-8</option>
+        <option value="-7">-7</option>
+        <option value="-6">-6</option>
+        <option value="-5">-5</option>
+        <option value="-4">-4</option>
+        <option value="-3">-3</option>
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="0">0</option>
+        <option value="1" selected="selected">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="alpha_layouts_alpha_default_narrow_media" data-description="The @media query that the Narrow layout should respond to." class="tooltip">Media Query</label>
+      <input type="text" name="alpha_layouts_alpha_default_narrow_media" id="alpha_layouts_alpha_default_narrow_media" value="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
     </div>
   </div>
   <hr>
