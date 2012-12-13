@@ -53,6 +53,9 @@
       <label for="global_styles_weight">Global Styles Weight</label>
       <input type="text" name="global_styles_weight" id="global_styles_weight" value="10">
     </div>
+    <div class="clear"></div>
+    <h4>Toggle Display</h4>
+    <p class="info">Enable or disable the display of certain page elements.</p>
     <div class="field">
       <label for="toggle_logo">Toggle Logo</label>
       <input type="text" name="toggle_logo" id="toggle_logo" value="1">
@@ -89,17 +92,122 @@
       <label for="toggle_secondary_menu">Toggle Secondary Menu</label>
       <input type="text" name="toggle_secondary_menu" id="toggle_secondary_menu" value="1">
     </div>
+    <div class="clear"></div>
+    <h4>Logo Settings</h4>
     <div class="field">
-      <label for="default_logo">Default Logo</label>
+      <label for="default_logo" data-description="If enabled, the theme will use the logo supplied with it." class="tooltip">Default Logo</label>
       <input type="text" name="default_logo" id="default_logo" value="1">
     </div>
     <div class="field">
-      <label for="logo_path">Logo Path</label>
+      <label for="logo_path" data-description="The path to the file you would like to use as your logo file instead of the default logo." class="tooltip">Logo Path</label>
       <input type="text" name="logo_path" id="logo_path">
     </div>
     <div class="field">
       <label for="logo_upload">Logo Upload</label>
       <input type="text" name="logo_upload" id="logo_upload">
+    </div>
+    <div class="clear"></div>
+    <h4>Favicon Settings</h4>
+    <div class="field">
+      <label for="default_favicon" data-description="If enabled, the theme will use the default shortcut icon." class="tooltip">Default Favicon</label>
+      <input type="text" name="default_favicon" id="default_favicon" value="1">
+    </div>
+    <div class="field">
+      <label for="favicon_path" data-description="The path to the image file you would like to use as your custom shortcut icon." class="tooltip">Favicon Path</label>
+      <input type="text" name="favicon_path" id="favicon_path">
+    </div>
+    <div class="field">
+      <label for="favicon_upload">Favicon Upload</label>
+      <input type="text" name="favicon_upload" id="favicon_upload">
+    </div>
+    <div class="clear"></div>
+    <h4>Grid System</h4>
+    <div class="field">
+      <label for="alpha_grid" data-description="Select the grid system that you want to use for this layout." class="tooltip">Alpha Grid</label>
+      <select name="alpha_grid" id="alpha_viewport_initial_scale">
+        <option value="alpha_default" selected="selected">Default (960px)</option>
+        <option value="alpha_fluid">Fluid</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="alpha_responsive" data-description="If enabled, this will unleash the responsive layout features that come with Alpha & Omega." class="tooltip">Alpha Responsive</label>
+      <input type="text" name="alpha_responsive" id="alpha_responsive" value="1">
+    </div>
+    <div class="field">
+      <label for="alpha_viewport" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Alpha Viewpoint</label>
+      <input type="text" name="alpha_viewport" id="alpha_viewport" value="1">
+    </div>
+    <div class="field">
+      <label for="alpha_viewport_initial_scale" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Alpha Viewpoint Initial Scale</label>
+      <select name="alpha_viewport_initial_scale" id="alpha_viewport_initial_scale">
+        <option value="1" selected="selected">1.0</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2.0</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3.0</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4.0</option>
+        <option value="4.5">4.5</option>
+        <option value="5">5.0</option>
+        <option value="5.5">5.5</option>
+        <option value="6">6.0</option>
+        <option value="6.5">6.5</option>
+        <option value="7">7.0</option>
+        <option value="7.5">7.5</option>
+        <option value="8">8.0</option>
+        <option value="8.5">8.5</option>
+        <option value="9">9.0</option>
+        <option value="9.5">9.5</option>
+        <option value="10">10.0</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="alpha_viewport_min_scale" data-description="The minimum scaling of the site. This should usually be the same as your <em>Initial scale</em> setting." class="tooltip">Alpha Viewpoint Minimum Scale</label>
+      <select name="alpha_viewport_min_scale" id="alpha_viewport_min_scale">
+        <option value="1" selected="selected">1.0</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2.0</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3.0</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4.0</option>
+        <option value="4.5">4.5</option>
+        <option value="5">5.0</option>
+        <option value="5.5">5.5</option>
+        <option value="6">6.0</option>
+        <option value="6.5">6.5</option>
+        <option value="7">7.0</option>
+        <option value="7.5">7.5</option>
+        <option value="8">8.0</option>
+        <option value="8.5">8.5</option>
+        <option value="9">9.0</option>
+        <option value="9.5">9.5</option>
+        <option value="10">10.0</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="alpha_viewport_max_scale" data-description="The maximum scaling of the site. This can be any value between 1 and 10, but should not be too big if you want to preserve your mobile look and feel." class="tooltip">Alpha Viewpoint Maximum Scale</label>
+      <select name="alpha_viewport_max_scale" id="alpha_viewport_max_scale">
+        <option value="1" selected="selected">1.0</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2.0</option>
+        <option value="2.5">2.5</option>
+        <option value="3">3.0</option>
+        <option value="3.5">3.5</option>
+        <option value="4">4.0</option>
+        <option value="4.5">4.5</option>
+        <option value="5">5.0</option>
+        <option value="5.5">5.5</option>
+        <option value="6">6.0</option>
+        <option value="6.5">6.5</option>
+        <option value="7">7.0</option>
+        <option value="7.5">7.5</option>
+        <option value="8">8.0</option>
+        <option value="8.5">8.5</option>
+        <option value="9">9.0</option>
+        <option value="9.5">9.5</option>
+        <option value="10">10.0</option>
+      </select>
     </div>
   </div>
   <hr>
@@ -137,7 +245,7 @@
           <input type="text" value="" name="css" /></div>
           <div class="field"><label class="tooltip" data-description="Enter any CSS classes to be added to the zone wrapper for theming. This will only be used if the option to provide a full width wrapper around the zone is enabled.">Wrapper CSS</label>
           <input type="text" value="" name="wrapper_css" /></div>
-          <div class="field"><label>= Height Con.</label>
+          <div class="field"><label data-description="Enable this goodie if you'd like blocks within the same region to automagically become the same height. Great solution for those chunky footers everyone loves! Enable this option, save the settings, then go back into the configuration settings for a particular zone. Now you can force all the child elements of that zone to be equal heights, or you can set it per region." class="tooltip">= Height Con.</label>
           <input type="text" value="0" name="equal_height_container" /></div>
         </div>
       </div>

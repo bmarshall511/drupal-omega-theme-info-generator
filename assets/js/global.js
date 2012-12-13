@@ -86,6 +86,18 @@ $(function(){
     var default_logo = $("input[name='default_logo']").val();
     var logo_path = $("input[name='logo_path']").val();
     var logo_upload = $("input[name='logo_upload']").val();
+    var default_favicon = $("input[name='default_favicon']").val();
+    var favicon_path = $("input[name='favicon_path']").val();
+    var favicon_upload = $("input[name='favicon_upload']").val();
+    var alpha_grid = $("select[name='alpha_grid']").val();
+    var toggle_favicon = $("input[name='toggle_favicon']").val();
+    var toggle_main_menu = $("input[name='toggle_main_menu']").val();
+    var toggle_secondary_menu = $("input[name='toggle_secondary_menu']").val();
+    var alpha_responsive = $("input[name='alpha_responsive']").val();
+    var alpha_viewport = $("input[name='alpha_viewport']").val();
+    var alpha_viewport_initial_scale = $("select[name='alpha_viewport_initial_scale']").val();
+    var alpha_viewport_min_scale = $("select[name='alpha_viewport_min_scale']").val();
+    var alpha_viewport_max_scale = $("select[name='alpha_viewport_max_scale']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -108,21 +120,21 @@ $(function(){
     txt = txt + "settings[default_logo] = '"+default_logo+"'\n";
     txt = txt + "settings[logo_path] = '"+logo_path+"'\n";
     txt = txt + "settings[logo_upload] = '"+logo_upload+"'\n";
+    txt = txt + "settings[default_favicon] = '"+default_favicon+"'\n";
+    txt = txt + "settings[favicon_path] = '"+favicon_path+"'\n";
+    txt = txt + "settings[favicon_upload] = '"+favicon_upload+"'\n";
+    txt = txt + "settings[alpha_grid] = '"+alpha_grid+"'\n";
+    txt = txt + "settings[alpha_responsive] = '"+alpha_responsive+"'\n";
+    txt = txt + "settings[alpha_viewport] = '"+alpha_viewport+"'\n";
+    txt = txt + "settings[alpha_viewport_initial_scale] = '"+alpha_viewport_initial_scale+"'\n";
+    txt = txt + "settings[alpha_viewport_min_scale] = '"+alpha_viewport_min_scale+"'\n";
+    txt = txt + "settings[alpha_viewport_max_scale] = '"+alpha_viewport_max_scale+"'\n";
     
     
     
     
     
     
-    txt = txt + "settings[default_favicon] = '1'\n";
-    txt = txt + "settings[favicon_path] = ''\n";
-    txt = txt + "settings[favicon_upload] = ''\n";
-    txt = txt + "settings[alpha_grid] = 'alpha_default'\n";
-    txt = txt + "settings[alpha_responsive] = '1'\n";
-    txt = txt + "settings[alpha_viewport] = '1'\n";
-    txt = txt + "settings[alpha_viewport_initial_scale] = '1'\n";
-    txt = txt + "settings[alpha_viewport_min_scale] = '1'\n";
-    txt = txt + "settings[alpha_viewport_max_scale] = '1'\n";
     txt = txt + "settings[alpha_viewport_user_scaleable] = '0'\n";
     txt = txt + "settings[alpha_primary_alpha_default] = 'normal'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_narrow_responsive] = '1'\n";
