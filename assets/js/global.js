@@ -1,4 +1,8 @@
 $(function(){
+  $('h3.section').live('click',function(e) {
+    e.preventDefault();
+    $(this).next('.section-box').slideToggle();
+  });
   $("textarea").focus(function() {
     var $this = $(this);
     $this.select();

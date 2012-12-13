@@ -15,362 +15,364 @@
 <div class="container">
   <h1>Omega Theme .info Generator</h1>
   <h2>Use the form below to build then generate your custom Omega child theme's .info file.</h2>
-  <h3>Theme Settings</h3>
-  <div class="standard-fields">
+  <h3 class="section">Theme Settings</h3>
+  <div class="section-box">
+    <div class="standard-fields">
+      <div class="field required">
+    <label for="theme_name" data-description="The name of your theme." class="tooltip">Name</label>
+    <input type="text" name="theme_name" id="theme_name">
+    </div>
+    <div class="field recommended">
+    <label for="theme_description" data-description="The description of your theme." class="tooltip">Description</label>
+    <input type="text" name="theme_description" id="theme_description">
+    </div>
     <div class="field required">
-  <label for="theme_name" data-description="The name of your theme." class="tooltip">Name</label>
-  <input type="text" name="theme_name" id="theme_name">
-  </div>
-  <div class="field recommended">
-  <label for="theme_description" data-description="The description of your theme." class="tooltip">Description</label>
-  <input type="text" name="theme_description" id="theme_description">
-  </div>
-  <div class="field required">
-  <label for="core" data-description="The Drupal version that your theme is for. If for Drupal 6 this would be 6.x, Drupal 7 would be 7.x, etc. Themes cannot specify the specific version of a branch of Drupal. 6.x is correct 6.2 is not." class="tooltip">Core</label>
-  <input type="text" name="core" id="core" value="7.x">
-  </div>
-  <div class="field required">
-  <label for="engine" data-description="The theme engine, which is used by the theme. If none is provided, the theme is assumed to be stand alone, i.e., implemented with a '.theme' file. Most themes should use 'phptemplate' as the default engine.<br><br>Note that in Drupal 7, this line is no longer necessary because PHPTemplate is assumed by default.<br><br><em>PHPTemplate's job is to discover theme functions and templates for the behavior of the theme. Omit this entry only if you know what you are doing.</em>" class="tooltip">Engine</label>
-  <input type="text" name="engine" id="engine" value="phptemplate">
-  </div>
-  <div class="field">
-  <label for="screenshot" data-description="The optional screenshot key tells Drupal where to find the theme's thumbnail image, used on the theme selection page (admin/build/themes). If this key is omitted from the .info file, Drupal uses the 'screenshot.png' file in the theme's directory.<br><br>Use this key only if your thumbnail file is not called 'screenshot.png' or if you want to place it in a directory outside of your theme's base directory (e.g. screenshot = images/screenshot.png)." class="tooltip">Screenshot</label>
-  <input type="text" name="screenshot" id="screenshot" value="screenshot.png">
-  </div>
-    <div class="field">
-      <label for="base_theme" data-description="Sub-themes can declare a base theme. This allows for theme inheritance, meaning the resources from the 'base theme' will cascade and be reused inside the sub-theme. Sub-themes can declare other sub-themes as their base, allowing multiple levels of inheritance. Use the internal 'machine' readable name of the base theme. The following is used in Minnelli, the sub-theme of Garland." class="tooltip">Base Theme</label>
-      <input type="text" name="base_theme" id="base_theme" value="omega">
+    <label for="core" data-description="The Drupal version that your theme is for. If for Drupal 6 this would be 6.x, Drupal 7 would be 7.x, etc. Themes cannot specify the specific version of a branch of Drupal. 6.x is correct 6.2 is not." class="tooltip">Core</label>
+    <input type="text" name="core" id="core" value="7.x">
+    </div>
+    <div class="field required">
+    <label for="engine" data-description="The theme engine, which is used by the theme. If none is provided, the theme is assumed to be stand alone, i.e., implemented with a '.theme' file. Most themes should use 'phptemplate' as the default engine.<br><br>Note that in Drupal 7, this line is no longer necessary because PHPTemplate is assumed by default.<br><br><em>PHPTemplate's job is to discover theme functions and templates for the behavior of the theme. Omit this entry only if you know what you are doing.</em>" class="tooltip">Engine</label>
+    <input type="text" name="engine" id="engine" value="phptemplate">
     </div>
     <div class="field">
-      <label for="global_styles_name">Global Styles Name</label>
-      <input type="text" name="global_styles_name" id="global_styles_name" value="Your custom global styles">
+    <label for="screenshot" data-description="The optional screenshot key tells Drupal where to find the theme's thumbnail image, used on the theme selection page (admin/build/themes). If this key is omitted from the .info file, Drupal uses the 'screenshot.png' file in the theme's directory.<br><br>Use this key only if your thumbnail file is not called 'screenshot.png' or if you want to place it in a directory outside of your theme's base directory (e.g. screenshot = images/screenshot.png)." class="tooltip">Screenshot</label>
+    <input type="text" name="screenshot" id="screenshot" value="screenshot.png">
     </div>
-    <div class="field">
-      <label for="global_styles_description">Global Styles Description</label>
-      <input type="text" name="global_styles_description" id="global_styles_description" value="This file holds all the globally active custom CSS of your theme.">
-    </div>
-    <div class="field">
-      <label for="global_styles_weight">Global Styles Weight</label>
-      <input type="text" name="global_styles_weight" id="global_styles_weight" value="10">
-    </div>
-    <div class="clear"></div>
-    <h4>Toggle Display</h4>
-    <p class="info">Enable or disable the display of certain page elements.</p>
-    <div class="field">
-      <label for="toggle_logo">Toggle Logo</label>
-      <input type="text" name="toggle_logo" id="toggle_logo" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_name">Toggle Name</label>
-      <input type="text" name="toggle_name" id="toggle_name" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_slogan">Toggle Slogan</label>
-      <input type="text" name="toggle_slogan" id="toggle_slogan" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_node_user_picture">Toggle Node User Picture</label>
-      <input type="text" name="toggle_node_user_picture" id="toggle_node_user_picture" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_comment_user_picture">Toggle Comment User Picture</label>
-      <input type="text" name="toggle_comment_user_picture" id="toggle_comment_user_picture" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_comment_user_verification">Toggle Comment User Verification</label>
-      <input type="text" name="toggle_comment_user_verification" id="toggle_comment_user_verification" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_favicon">Toggle Favicon</label>
-      <input type="text" name="toggle_favicon" id="toggle_favicon" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_main_menu">Toggle Main Menu</label>
-      <input type="text" name="toggle_main_menu" id="toggle_main_menu" value="1">
-    </div>
-    <div class="field">
-      <label for="toggle_secondary_menu">Toggle Secondary Menu</label>
-      <input type="text" name="toggle_secondary_menu" id="toggle_secondary_menu" value="1">
-    </div>
-    <div class="clear"></div>
-    <h4>Logo Settings</h4>
-    <div class="field">
-      <label for="default_logo" data-description="If enabled, the theme will use the logo supplied with it." class="tooltip">Default Logo</label>
-      <input type="text" name="default_logo" id="default_logo" value="1">
-    </div>
-    <div class="field">
-      <label for="logo_path" data-description="The path to the file you would like to use as your logo file instead of the default logo." class="tooltip">Logo Path</label>
-      <input type="text" name="logo_path" id="logo_path">
-    </div>
-    <div class="field">
-      <label for="logo_upload">Logo Upload</label>
-      <input type="text" name="logo_upload" id="logo_upload">
-    </div>
-    <div class="clear"></div>
-    <h4>Favicon Settings</h4>
-    <div class="field">
-      <label for="default_favicon" data-description="If enabled, the theme will use the default shortcut icon." class="tooltip">Default Favicon</label>
-      <input type="text" name="default_favicon" id="default_favicon" value="1">
-    </div>
-    <div class="field">
-      <label for="favicon_path" data-description="The path to the image file you would like to use as your custom shortcut icon." class="tooltip">Favicon Path</label>
-      <input type="text" name="favicon_path" id="favicon_path">
-    </div>
-    <div class="field">
-      <label for="favicon_upload">Favicon Upload</label>
-      <input type="text" name="favicon_upload" id="favicon_upload">
-    </div>
-    <div class="clear"></div>
-    <h4>Grid System</h4>
-    <div class="field">
-      <label for="alpha_grid" data-description="Select the grid system that you want to use for this layout." class="tooltip">Alpha Grid</label>
-      <select name="alpha_grid" id="alpha_viewport_initial_scale">
-        <option value="alpha_default" selected="selected">Default (960px)</option>
-        <option value="alpha_fluid">Fluid</option>
-      </select>
-    </div>
-    <div class="clear"></div>
-    <h5>Responsive Settings</h5>
-    <div class="field">
-      <label for="alpha_responsive" data-description="If enabled, this will unleash the responsive layout features that come with Alpha & Omega." class="tooltip">Alpha Responsive</label>
-      <input type="text" name="alpha_responsive" id="alpha_responsive" value="1">
-    </div>
-    <div class="field">
-      <label for="alpha_viewport" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Allow customizing viewport on iOS &amp; Android</label>
-      <input type="text" name="alpha_viewport" id="alpha_viewport" value="1">
-    </div>
-    <div class="clear"></div>
-    <h6>Viewport Settings</h6>
-    <div class="field">
-      <label for="alpha_viewport_initial_scale" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Initial Scale</label>
-      <select name="alpha_viewport_initial_scale" id="alpha_viewport_initial_scale">
-        <option value="1" selected="selected">1.0</option>
-        <option value="1.5">1.5</option>
-        <option value="2">2.0</option>
-        <option value="2.5">2.5</option>
-        <option value="3">3.0</option>
-        <option value="3.5">3.5</option>
-        <option value="4">4.0</option>
-        <option value="4.5">4.5</option>
-        <option value="5">5.0</option>
-        <option value="5.5">5.5</option>
-        <option value="6">6.0</option>
-        <option value="6.5">6.5</option>
-        <option value="7">7.0</option>
-        <option value="7.5">7.5</option>
-        <option value="8">8.0</option>
-        <option value="8.5">8.5</option>
-        <option value="9">9.0</option>
-        <option value="9.5">9.5</option>
-        <option value="10">10.0</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="alpha_viewport_min_scale" data-description="The minimum scaling of the site. This should usually be the same as your <em>Initial scale</em> setting." class="tooltip">Minimum Scale</label>
-      <select name="alpha_viewport_min_scale" id="alpha_viewport_min_scale">
-        <option value="1" selected="selected">1.0</option>
-        <option value="1.5">1.5</option>
-        <option value="2">2.0</option>
-        <option value="2.5">2.5</option>
-        <option value="3">3.0</option>
-        <option value="3.5">3.5</option>
-        <option value="4">4.0</option>
-        <option value="4.5">4.5</option>
-        <option value="5">5.0</option>
-        <option value="5.5">5.5</option>
-        <option value="6">6.0</option>
-        <option value="6.5">6.5</option>
-        <option value="7">7.0</option>
-        <option value="7.5">7.5</option>
-        <option value="8">8.0</option>
-        <option value="8.5">8.5</option>
-        <option value="9">9.0</option>
-        <option value="9.5">9.5</option>
-        <option value="10">10.0</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="alpha_viewport_max_scale" data-description="The maximum scaling of the site. This can be any value between 1 and 10, but should not be too big if you want to preserve your mobile look and feel." class="tooltip">Maximum Scale</label>
-      <select name="alpha_viewport_max_scale" id="alpha_viewport_max_scale">
-        <option value="1" selected="selected">1.0</option>
-        <option value="1.5">1.5</option>
-        <option value="2">2.0</option>
-        <option value="2.5">2.5</option>
-        <option value="3">3.0</option>
-        <option value="3.5">3.5</option>
-        <option value="4">4.0</option>
-        <option value="4.5">4.5</option>
-        <option value="5">5.0</option>
-        <option value="5.5">5.5</option>
-        <option value="6">6.0</option>
-        <option value="6.5">6.5</option>
-        <option value="7">7.0</option>
-        <option value="7.5">7.5</option>
-        <option value="8">8.0</option>
-        <option value="8.5">8.5</option>
-        <option value="9">9.0</option>
-        <option value="9.5">9.5</option>
-        <option value="10">10.0</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="alpha_viewport_user_scaleable" data-description="Determine if a user can resize the screen. This is usually accomplished via multi-touch gestures on iOS and Android devices. If your mobile theme is very customized and presented with good typography and graphics for a reduced mobile size, it is recommended to leave this setting unchecked. If it is left unchecked, the min-scale and max-scale properties will be ignored.<br><br>HTC Android devices do NOT (currently) respect the viewport meta tag for <code>user-scalable</code>. It will render at the appropriate <code>initial-scale</code> set above, but a user can still zoom in/out." class="tooltip">Scalable by User</label>
-      <input type="text" name="alpha_viewport_user_scaleable" id="alpha_viewport_user_scaleable" value="0">
-    </div>
-    <div class="clear"></div>
-    <h5>Default (960px) Layout Settings</h5>
-    <div class="field">
-      <label for="alpha_primary_alpha_default" data-description="The primary layout will be used in case you disable the 'responsive grid' option as well as for older versions of Internet Explorer." class="tooltip">Primary Layout</label>
-      <select name="alpha_primary_alpha_default" id="alpha_primary_alpha_default">
-        <option value="narrow">Narrow</option>
-        <option value="normal" selected="selected">Normal</option>
-        <option value="fluid">Fluid</option>
-        <option value="wide">Wide</option>
-      </select>
-    </div>
-    <div class="clear"></div>
-    <h6>Narrow Layout</h6>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_narrow_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
-      <input type="text" name="alpha_layouts_alpha_default_narrow_responsive" id="alpha_layouts_alpha_default_narrow_responsive" value="1">
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_narrow_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
-      <select name="alpha_layouts_alpha_default_narrow_weight" id="alpha_layouts_alpha_default_narrow_weight">
-        <option value="-10">-10</option>
-        <option value="-9">-9</option>
-        <option value="-8">-8</option>
-        <option value="-7">-7</option>
-        <option value="-6">-6</option>
-        <option value="-5">-5</option>
-        <option value="-4">-4</option>
-        <option value="-3">-3</option>
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-        <option value="1" selected="selected">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_narrow_media" data-description="The @media query that the Narrow layout should respond to." class="tooltip">Media Query</label>
-      <input type="text" name="alpha_layouts_alpha_default_narrow_media" id="alpha_layouts_alpha_default_narrow_media" value="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
-    </div>
-    <div class="clear"></div>
-    <h6>Normal Layout</h6>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_normal_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
-      <input type="text" name="alpha_layouts_alpha_default_normal_responsive" id="alpha_layouts_alpha_default_normal_responsive" value="1">
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_normal_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
-      <select name="alpha_layouts_alpha_default_normal_weight" id="alpha_layouts_alpha_default_normal_weight">
-        <option value="-10">-10</option>
-        <option value="-9">-9</option>
-        <option value="-8">-8</option>
-        <option value="-7">-7</option>
-        <option value="-6">-6</option>
-        <option value="-5">-5</option>
-        <option value="-4">-4</option>
-        <option value="-3">-3</option>
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2" selected="selected">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_normal_media" data-description="The @media query that the Normal layout should respond to." class="tooltip">Media Query</label>
-      <input type="text" name="alpha_layouts_alpha_default_normal_media" id="alpha_layouts_alpha_default_normal_media" value="all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">
-    </div>
-    <div class="clear"></div>
-    <h6>Fluid Layout</h6>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_fluid_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
-      <input type="text" name="alpha_layouts_alpha_default_fluid_responsive" id="alpha_layouts_alpha_default_fluid_responsive" value="0">
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_fluid_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
-      <select name="alpha_layouts_alpha_default_fluid_weight" id="alpha_layouts_alpha_default_fluid_weight">
-        <option value="-10">-10</option>
-        <option value="-9">-9</option>
-        <option value="-8">-8</option>
-        <option value="-7">-7</option>
-        <option value="-6">-6</option>
-        <option value="-5">-5</option>
-        <option value="-4">-4</option>
-        <option value="-3">-3</option>
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0" selected="selected">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_fluid_media" data-description="The @media query that the Fluid layout should respond to." class="tooltip">Media Query</label>
-      <input type="text" name="alpha_layouts_alpha_default_fluid_media" id="alpha_layouts_alpha_default_fluid_media" value="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
-    </div>
-    <div class="clear"></div>
-    <h6>Wide Layout</h6>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_wide_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
-      <input type="text" name="alpha_layouts_alpha_default_wide_responsive" id="alpha_layouts_alpha_default_wide_responsive" value="0">
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_wide_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
-      <select name="alpha_layouts_alpha_default_wide_weight" id="alpha_layouts_alpha_default_wide_weight">
-        <option value="-10">-10</option>
-        <option value="-9">-9</option>
-        <option value="-8">-8</option>
-        <option value="-7">-7</option>
-        <option value="-6">-6</option>
-        <option value="-5">-5</option>
-        <option value="-4">-4</option>
-        <option value="-3">-3</option>
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0" selected="selected">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="alpha_layouts_alpha_default_wide_media" data-description="The @media query that the Wide layout should respond to." class="tooltip">Media Query</label>
-      <input type="text" name="alpha_layouts_alpha_default_wide_media" id="alpha_layouts_alpha_default_wide_media" value="all and (min-width: 1220px)">
+      <div class="field">
+        <label for="base_theme" data-description="Sub-themes can declare a base theme. This allows for theme inheritance, meaning the resources from the 'base theme' will cascade and be reused inside the sub-theme. Sub-themes can declare other sub-themes as their base, allowing multiple levels of inheritance. Use the internal 'machine' readable name of the base theme. The following is used in Minnelli, the sub-theme of Garland." class="tooltip">Base Theme</label>
+        <input type="text" name="base_theme" id="base_theme" value="omega">
+      </div>
+      <div class="field">
+        <label for="global_styles_name">Global Styles Name</label>
+        <input type="text" name="global_styles_name" id="global_styles_name" value="Your custom global styles">
+      </div>
+      <div class="field">
+        <label for="global_styles_description">Global Styles Description</label>
+        <input type="text" name="global_styles_description" id="global_styles_description" value="This file holds all the globally active custom CSS of your theme.">
+      </div>
+      <div class="field">
+        <label for="global_styles_weight">Global Styles Weight</label>
+        <input type="text" name="global_styles_weight" id="global_styles_weight" value="10">
+      </div>
+      <div class="clear"></div>
+      <h4>Toggle Display</h4>
+      <p class="info">Enable or disable the display of certain page elements.</p>
+      <div class="field">
+        <label for="toggle_logo">Toggle Logo</label>
+        <input type="text" name="toggle_logo" id="toggle_logo" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_name">Toggle Name</label>
+        <input type="text" name="toggle_name" id="toggle_name" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_slogan">Toggle Slogan</label>
+        <input type="text" name="toggle_slogan" id="toggle_slogan" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_node_user_picture">Toggle Node User Picture</label>
+        <input type="text" name="toggle_node_user_picture" id="toggle_node_user_picture" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_comment_user_picture">Toggle Comment User Picture</label>
+        <input type="text" name="toggle_comment_user_picture" id="toggle_comment_user_picture" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_comment_user_verification">Toggle Comment User Verification</label>
+        <input type="text" name="toggle_comment_user_verification" id="toggle_comment_user_verification" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_favicon">Toggle Favicon</label>
+        <input type="text" name="toggle_favicon" id="toggle_favicon" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_main_menu">Toggle Main Menu</label>
+        <input type="text" name="toggle_main_menu" id="toggle_main_menu" value="1">
+      </div>
+      <div class="field">
+        <label for="toggle_secondary_menu">Toggle Secondary Menu</label>
+        <input type="text" name="toggle_secondary_menu" id="toggle_secondary_menu" value="1">
+      </div>
+      <div class="clear"></div>
+      <h4>Logo Settings</h4>
+      <div class="field">
+        <label for="default_logo" data-description="If enabled, the theme will use the logo supplied with it." class="tooltip">Default Logo</label>
+        <input type="text" name="default_logo" id="default_logo" value="1">
+      </div>
+      <div class="field">
+        <label for="logo_path" data-description="The path to the file you would like to use as your logo file instead of the default logo." class="tooltip">Logo Path</label>
+        <input type="text" name="logo_path" id="logo_path">
+      </div>
+      <div class="field">
+        <label for="logo_upload">Logo Upload</label>
+        <input type="text" name="logo_upload" id="logo_upload">
+      </div>
+      <div class="clear"></div>
+      <h4>Favicon Settings</h4>
+      <div class="field">
+        <label for="default_favicon" data-description="If enabled, the theme will use the default shortcut icon." class="tooltip">Default Favicon</label>
+        <input type="text" name="default_favicon" id="default_favicon" value="1">
+      </div>
+      <div class="field">
+        <label for="favicon_path" data-description="The path to the image file you would like to use as your custom shortcut icon." class="tooltip">Favicon Path</label>
+        <input type="text" name="favicon_path" id="favicon_path">
+      </div>
+      <div class="field">
+        <label for="favicon_upload">Favicon Upload</label>
+        <input type="text" name="favicon_upload" id="favicon_upload">
+      </div>
+      <div class="clear"></div>
+      <h4>Grid System</h4>
+      <div class="field">
+        <label for="alpha_grid" data-description="Select the grid system that you want to use for this layout." class="tooltip">Alpha Grid</label>
+        <select name="alpha_grid" id="alpha_viewport_initial_scale">
+          <option value="alpha_default" selected="selected">Default (960px)</option>
+          <option value="alpha_fluid">Fluid</option>
+        </select>
+      </div>
+      <div class="clear"></div>
+      <h5>Responsive Settings</h5>
+      <div class="field">
+        <label for="alpha_responsive" data-description="If enabled, this will unleash the responsive layout features that come with Alpha & Omega." class="tooltip">Alpha Responsive</label>
+        <input type="text" name="alpha_responsive" id="alpha_responsive" value="1">
+      </div>
+      <div class="field">
+        <label for="alpha_viewport" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Allow customizing viewport on iOS &amp; Android</label>
+        <input type="text" name="alpha_viewport" id="alpha_viewport" value="1">
+      </div>
+      <div class="clear"></div>
+      <h6>Viewport Settings</h6>
+      <div class="field">
+        <label for="alpha_viewport_initial_scale" data-description="By default, most mobile browsers choose their own way to handle page rendering by using the viewport meta tag. iOS and Android are 'capable' of displaying full size websites by simply scaling down the view. However, when using a truly mobile version of your theme, you will / may want to customize these settings. You can find more information about this in the <a href='http://drupal.org/node/819164' target='_blank'>Omega documentation</a>." class="tooltip">Initial Scale</label>
+        <select name="alpha_viewport_initial_scale" id="alpha_viewport_initial_scale">
+          <option value="1" selected="selected">1.0</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2.0</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3.0</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4.0</option>
+          <option value="4.5">4.5</option>
+          <option value="5">5.0</option>
+          <option value="5.5">5.5</option>
+          <option value="6">6.0</option>
+          <option value="6.5">6.5</option>
+          <option value="7">7.0</option>
+          <option value="7.5">7.5</option>
+          <option value="8">8.0</option>
+          <option value="8.5">8.5</option>
+          <option value="9">9.0</option>
+          <option value="9.5">9.5</option>
+          <option value="10">10.0</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_viewport_min_scale" data-description="The minimum scaling of the site. This should usually be the same as your <em>Initial scale</em> setting." class="tooltip">Minimum Scale</label>
+        <select name="alpha_viewport_min_scale" id="alpha_viewport_min_scale">
+          <option value="1" selected="selected">1.0</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2.0</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3.0</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4.0</option>
+          <option value="4.5">4.5</option>
+          <option value="5">5.0</option>
+          <option value="5.5">5.5</option>
+          <option value="6">6.0</option>
+          <option value="6.5">6.5</option>
+          <option value="7">7.0</option>
+          <option value="7.5">7.5</option>
+          <option value="8">8.0</option>
+          <option value="8.5">8.5</option>
+          <option value="9">9.0</option>
+          <option value="9.5">9.5</option>
+          <option value="10">10.0</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_viewport_max_scale" data-description="The maximum scaling of the site. This can be any value between 1 and 10, but should not be too big if you want to preserve your mobile look and feel." class="tooltip">Maximum Scale</label>
+        <select name="alpha_viewport_max_scale" id="alpha_viewport_max_scale">
+          <option value="1" selected="selected">1.0</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2.0</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3.0</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4.0</option>
+          <option value="4.5">4.5</option>
+          <option value="5">5.0</option>
+          <option value="5.5">5.5</option>
+          <option value="6">6.0</option>
+          <option value="6.5">6.5</option>
+          <option value="7">7.0</option>
+          <option value="7.5">7.5</option>
+          <option value="8">8.0</option>
+          <option value="8.5">8.5</option>
+          <option value="9">9.0</option>
+          <option value="9.5">9.5</option>
+          <option value="10">10.0</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_viewport_user_scaleable" data-description="Determine if a user can resize the screen. This is usually accomplished via multi-touch gestures on iOS and Android devices. If your mobile theme is very customized and presented with good typography and graphics for a reduced mobile size, it is recommended to leave this setting unchecked. If it is left unchecked, the min-scale and max-scale properties will be ignored.<br><br>HTC Android devices do NOT (currently) respect the viewport meta tag for <code>user-scalable</code>. It will render at the appropriate <code>initial-scale</code> set above, but a user can still zoom in/out." class="tooltip">Scalable by User</label>
+        <input type="text" name="alpha_viewport_user_scaleable" id="alpha_viewport_user_scaleable" value="0">
+      </div>
+      <div class="clear"></div>
+      <h5>Default (960px) Layout Settings</h5>
+      <div class="field">
+        <label for="alpha_primary_alpha_default" data-description="The primary layout will be used in case you disable the 'responsive grid' option as well as for older versions of Internet Explorer." class="tooltip">Primary Layout</label>
+        <select name="alpha_primary_alpha_default" id="alpha_primary_alpha_default">
+          <option value="narrow">Narrow</option>
+          <option value="normal" selected="selected">Normal</option>
+          <option value="fluid">Fluid</option>
+          <option value="wide">Wide</option>
+        </select>
+      </div>
+      <div class="clear"></div>
+      <h6>Narrow Layout</h6>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_narrow_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
+        <input type="text" name="alpha_layouts_alpha_default_narrow_responsive" id="alpha_layouts_alpha_default_narrow_responsive" value="1">
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_narrow_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
+        <select name="alpha_layouts_alpha_default_narrow_weight" id="alpha_layouts_alpha_default_narrow_weight">
+          <option value="-10">-10</option>
+          <option value="-9">-9</option>
+          <option value="-8">-8</option>
+          <option value="-7">-7</option>
+          <option value="-6">-6</option>
+          <option value="-5">-5</option>
+          <option value="-4">-4</option>
+          <option value="-3">-3</option>
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0">0</option>
+          <option value="1" selected="selected">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_narrow_media" data-description="The @media query that the Narrow layout should respond to." class="tooltip">Media Query</label>
+        <input type="text" name="alpha_layouts_alpha_default_narrow_media" id="alpha_layouts_alpha_default_narrow_media" value="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
+      </div>
+      <div class="clear"></div>
+      <h6>Normal Layout</h6>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_normal_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
+        <input type="text" name="alpha_layouts_alpha_default_normal_responsive" id="alpha_layouts_alpha_default_normal_responsive" value="1">
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_normal_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
+        <select name="alpha_layouts_alpha_default_normal_weight" id="alpha_layouts_alpha_default_normal_weight">
+          <option value="-10">-10</option>
+          <option value="-9">-9</option>
+          <option value="-8">-8</option>
+          <option value="-7">-7</option>
+          <option value="-6">-6</option>
+          <option value="-5">-5</option>
+          <option value="-4">-4</option>
+          <option value="-3">-3</option>
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2" selected="selected">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_normal_media" data-description="The @media query that the Normal layout should respond to." class="tooltip">Media Query</label>
+        <input type="text" name="alpha_layouts_alpha_default_normal_media" id="alpha_layouts_alpha_default_normal_media" value="all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">
+      </div>
+      <div class="clear"></div>
+      <h6>Fluid Layout</h6>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_fluid_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
+        <input type="text" name="alpha_layouts_alpha_default_fluid_responsive" id="alpha_layouts_alpha_default_fluid_responsive" value="0">
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_fluid_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
+        <select name="alpha_layouts_alpha_default_fluid_weight" id="alpha_layouts_alpha_default_fluid_weight">
+          <option value="-10">-10</option>
+          <option value="-9">-9</option>
+          <option value="-8">-8</option>
+          <option value="-7">-7</option>
+          <option value="-6">-6</option>
+          <option value="-5">-5</option>
+          <option value="-4">-4</option>
+          <option value="-3">-3</option>
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0" selected="selected">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_fluid_media" data-description="The @media query that the Fluid layout should respond to." class="tooltip">Media Query</label>
+        <input type="text" name="alpha_layouts_alpha_default_fluid_media" id="alpha_layouts_alpha_default_fluid_media" value="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
+      </div>
+      <div class="clear"></div>
+      <h6>Wide Layout</h6>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_wide_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
+        <input type="text" name="alpha_layouts_alpha_default_wide_responsive" id="alpha_layouts_alpha_default_wide_responsive" value="0">
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_wide_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
+        <select name="alpha_layouts_alpha_default_wide_weight" id="alpha_layouts_alpha_default_wide_weight">
+          <option value="-10">-10</option>
+          <option value="-9">-9</option>
+          <option value="-8">-8</option>
+          <option value="-7">-7</option>
+          <option value="-6">-6</option>
+          <option value="-5">-5</option>
+          <option value="-4">-4</option>
+          <option value="-3">-3</option>
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0" selected="selected">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_default_wide_media" data-description="The @media query that the Wide layout should respond to." class="tooltip">Media Query</label>
+        <input type="text" name="alpha_layouts_alpha_default_wide_media" id="alpha_layouts_alpha_default_wide_media" value="all and (min-width: 1220px)">
+      </div>
     </div>
   </div>
   <hr>
