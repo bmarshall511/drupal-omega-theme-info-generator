@@ -1,4 +1,13 @@
 $(function(){
+  $("textarea").focus(function() {
+    var $this = $(this);
+    $this.select();
+
+    $this.mouseup(function() {
+        $this.unbind("mouseup");
+        return false;
+    });
+  });
   $('.tooltip').hover(function() {
     var txt = $(this).attr('data-description');
     $(this).append('<span class="tt">'+txt+'</span>').fadeIn();
@@ -71,6 +80,9 @@ $(function(){
     var toggle_logo = $("input[name='toggle_logo']").val();
     var toggle_name = $("input[name='toggle_name']").val();
     var toggle_slogan = $("input[name='toggle_slogan']").val();
+    var toggle_node_user_picture = $("input[name='toggle_node_user_picture']").val();
+    var toggle_comment_user_picture = $("input[name='toggle_comment_user_picture']").val();
+    var toggle_comment_user_verification = $("input[name='toggle_comment_user_verification']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -84,16 +96,18 @@ $(function(){
     txt = txt + "settings[toggle_logo] = '"+toggle_logo+"'\n";
     txt = txt + "settings[toggle_name] = '"+toggle_name+"'\n";
     txt = txt + "settings[toggle_slogan] = '"+toggle_slogan+"'\n";
+    txt = txt + "settings[toggle_node_user_picture] = '"+toggle_node_user_picture+"'\n";
+    txt = txt + "settings[toggle_comment_user_picture] = '"+toggle_comment_user_picture+"'\n";
+    txt = txt + "settings[toggle_comment_user_verification] = '"+toggle_comment_user_verification+"'\n";
+    txt = txt + "settings[toggle_favicon] = '"+toggle_favicon+"'\n";
+    txt = txt + "settings[toggle_main_menu] = '"+toggle_main_menu+"'\n";
+    txt = txt + "settings[toggle_secondary_menu] = '"+toggle_secondary_menu+"'\n";
     
     
     
     
-    txt = txt + "settings[toggle_node_user_picture] = '1'\n";
-    txt = txt + "settings[toggle_comment_user_picture] = '1'\n";
-    txt = txt + "settings[toggle_comment_user_verification] = '1'\n";
-    txt = txt + "settings[toggle_favicon] = '1'\n";
-    txt = txt + "settings[toggle_main_menu] = '1'\n";
-    txt = txt + "settings[toggle_secondary_menu] = '1'\n";
+    
+    
     txt = txt + "settings[default_logo] = '1'\n";
     txt = txt + "settings[logo_path] = ''\n";
     txt = txt + "settings[logo_upload] = ''\n";
