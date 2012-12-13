@@ -98,6 +98,7 @@ $(function(){
     var alpha_viewport_initial_scale = $("select[name='alpha_viewport_initial_scale']").val();
     var alpha_viewport_min_scale = $("select[name='alpha_viewport_min_scale']").val();
     var alpha_viewport_max_scale = $("select[name='alpha_viewport_max_scale']").val();
+    var alpha_viewport_user_scaleable = $("input[name='alpha_viewport_user_scaleable']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -129,13 +130,13 @@ $(function(){
     txt = txt + "settings[alpha_viewport_initial_scale] = '"+alpha_viewport_initial_scale+"'\n";
     txt = txt + "settings[alpha_viewport_min_scale] = '"+alpha_viewport_min_scale+"'\n";
     txt = txt + "settings[alpha_viewport_max_scale] = '"+alpha_viewport_max_scale+"'\n";
+    txt = txt + "settings[alpha_viewport_user_scaleable] = '"+alpha_viewport_user_scaleable+"'\n";
     
     
     
     
     
     
-    txt = txt + "settings[alpha_viewport_user_scaleable] = '0'\n";
     txt = txt + "settings[alpha_primary_alpha_default] = 'normal'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_narrow_responsive] = '1'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_narrow_weight] = '1'\n";
