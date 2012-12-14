@@ -16,47 +16,41 @@ h5,h6{color:#424242}
 h6{border-bottom:1px dotted #ccc}
 a{text-decoration:none;color:#004975}
 a:hover{text-decoration:underline}
-input[type='text'], select { border: 1px solid #e5e5e5; background: #f9f9f9; padding: 5px; margin-bottom: 5px; box-sizing: border-box; width: 100% }
-.standard-fields input[type='text'] { padding: 10px; }
-.standard-fields .field {float:left;width:31%;margin:0 1%}
-.standard-fields:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
+input[type='text'],select{border:1px solid #e5e5e5;background:#f9f9f9;padding:5px;margin-bottom:5px;box-sizing:border-box;width:100%}
+.standard-fields input[type='text']{padding:10px}
+.standard-fields .field{float:left;width:31%;margin:0 1%}
+.standard-fields:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .standard-fields select{padding:0;height:35px;line-height:35px;margin:2px 0 5px 0}
+textarea{font-family:'Courier New',Courier,'Nimbus Mono L',monospace;border:1px solid #e5e5e5;background:#f9f9f9;padding:10px;box-sizing:border-box}
+ul{padding:0;margin:0;list-style-type:none}
+li{float:left;border:1px solid #e5e5e5;padding:3px;margin:0 10px 10px 0;width:23.9%;box-sizing: border-box;-moz-box-shadow:0 0 1px rgba(0,0,0,.5);-webkit-box-shadow:0 0 1px rgba(0,0,0,.5);box-shadow:0 0 1px rgba(0,0,0,.5)}
+li .inner{border:2px dashed #e5e5e5}
+li .inner h4{margin:3px;background:#f0f0f0;color:#999;text-align:center;font-size:14px;padding: 8px 5px;cursor:pointer;border:0}
+li .inner .fields .field{float:left;width:44%;margin:0 3%;}
 li .inner .fields .field select{padding:0;height:25px;line-height:25px;margin:2px 0 5px 0}
-textarea { font-family:'Courier New',Courier,'Nimbus Mono L',monospace; border: 1px solid #e5e5e5; background: #f9f9f9; padding: 10px; box-sizing: border-box; }
-ul { padding: 0; margin: 0; list-style-type: none;}
-li{ float: left; border: 1px solid #e5e5e5; padding: 3px; margin: 0 10px 10px 0; width: 23.9%; box-sizing: border-box; -moz-box-shadow: 0 0 1px rgba(0,0,0,.5); -webkit-box-shadow: 0 0 1px rgba(0,0,0,.5); box-shadow: 0 0 1px rgba(0,0,0,.5); }
-li .inner { border: 2px dashed #e5e5e5; }
-li .inner h4 { margin: 3px; background: #f0f0f0; color: #999; text-align: center; font-size: 14px; padding: 8px 5px; cursor: pointer; border:0 }
-li .inner .fields .field { float: left; width: 44%; margin: 0 3%;}
 li .inner .fields:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-.container { width:75%;min-width:400px;margin: 0 auto; border: 1px solid #e5e5e5; padding: 20px; box-sizing: border-box; background: #fff; -moz-box-shadow: 0 0 1px #f0f0f0; -webkit-box-shadow: 0 0 1px #f0f0f0; box-shadow: 0 0 1px rgba(0,0,0,.5);}
-.clear{clear:both;}
-.fright{float:right;}
+.container{width:75%;min-width:400px;margin:0 auto;border:1px solid #e5e5e5;padding:20px;box-sizing:border-box;background:#fff;-moz-box-shadow: 0 0 1px #f0f0f0;-webkit-box-shadow:0 0 1px #f0f0f0;box-shadow:0 0 1px rgba(0,0,0,.5)}
+.clear{clear:both}
+.fright{float:right}
 .btn.fright{margin:6px 10px 0 0}
 .btn {-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;box-shadow:inset 0px 1px 0px 0px #bbdaf7;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#0b8fe1),color-stop(1,#0678BE));background:-moz-linear-gradient(center top, #0b8fe1 5%, #0678BE 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b8fe1', endColorstr='#0678BE');background-color:#79bbff;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #84bbf3;display:inline-block;color:#fff;font-size:15px;font-weight:bold;padding:6px 24px;text-shadow:1px 1px 0px #528ecc}
 .btn:hover{text-decoration:none;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05, #0678BE),color-stop(1, #0b8fe1));background:-moz-linear-gradient(center top,#0678BE 5%,#0b8fe1 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0678BE',endColorstr='#0b8fe1');background-color:#0678BE}
 .btn:active{position:relative;top:1px}
 .copyright{font-size:14px;color:#ccc}
-.copyright a{color:#999;text-decoration:none;}
-.copyright a:hover{color:#000;}
-.alert{padding:8px 35px 8px 14px;margin-bottom:20px;text-shadow:0 1px 0 rgba(255,255,255,0.5);background-color:#fcf8e3;border:1px solid #fbeed5;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;color:#c09853;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;line-height:20px}
-.tt{display:block;position:absolute;z-index:999;top:25px;left:10px;padding:10px;background:#f0f0f0;line-height:18px;color:#0678BE;font-weight:normal;text-transform:none;-moz-box-shadow: 0 0 2px rgba(0,0,0,.5); -webkit-box-shadow: 0 0 2px rgba(0,0,0,.5); box-shadow: 0 0 2px rgba(0,0,0,.5)}
-li .inner .tt {top:5px;left:5px;width:296%}
-.required label:after,.recommended label:after { text-transform:none;font-weight:normal;font-style:italic}
-.required label:after{color:#d90000;content: " required";}
-.recommended label:after { content: " recommended"; color:#0678BE}
+.copyright a{color:#999;text-decoration:none}
+.copyright a:hover{color:#000}
+.alert{padding:8px 35px 8px 14px;margin-bottom:20px;text-shadow:0 1px 0 rgba(255,255,255,0.5);background-color:#fcf8e3;border:1px solid #fbeed5;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;color:#c09853;font-family:'Helvetica Neue',Helvetica, Arial,sans-serif;font-size:14px;line-height:20px}
+.tt{display:block;position:absolute;z-index:999;top:25px;left:10px;padding:10px;background:#f0f0f0;line-height:18px;color:#0678BE;font-weight:normal;text-transform:none;-moz-box-shadow:0 0 2px rgba(0,0,0,.5);-webkit-box-shadow:0 0 2px rgba(0,0,0,.5);box-shadow:0 0 2px rgba(0,0,0,.5)}
+li .inner .tt{top:5px;left:5px;width:296%}
+.required label:after,.recommended label:after{text-transform:none;font-weight:normal;font-style:italic}
+.required label:after{color:#d90000;content:" required"}
+.recommended label:after{content:" recommended";color:#0678BE}
 .info{font-size:14px;line-height:22px}
 .chromeframe{display:none}
 .lt-ie9 .chromeframe{display:block}
-@media screen and (max-width : 1320px) {
-  li{width: 48.8%}
+@media screen and (max-width:1320px){
+  li{width:48.8%}
 }
-@media screen and (max-width : 700px) {
-  li{width: 100%}
+@media screen and (max-width:700px){
+  li{width:100%}
 }
