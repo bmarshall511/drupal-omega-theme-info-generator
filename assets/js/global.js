@@ -3,10 +3,9 @@ $(function(){
     e.preventDefault();
     $(this).next('.section-box').slideToggle();
   });
-  $("textarea").focus(function() {
+  $("textarea").live('click',function() {
     var $this = $(this);
     $this.select();
-
     $this.mouseup(function() {
         $this.unbind("mouseup");
         return false;
@@ -20,7 +19,6 @@ $(function(){
       $('.tt',this).remove();
     });
   });
-  
   $('.new-zone').live('click',function(e) {
     e.preventDefault();
     var html = $('#zones li:last-child').html();
@@ -35,7 +33,6 @@ $(function(){
     $("#regions").append('<li>'+html);
     $("#regions li:last-child h4").html('<span>- Untitled -</span>');
   });
-
   $('.remove-region').live('click',function(e) {
     e.preventDefault();
     var count = $("#regions li").length;
@@ -58,7 +55,7 @@ $(function(){
   });
   $(".box-name").live('keyup',function(){
     var value = $(this).val();
-    var element = $(this).parent().parent();
+    var element = $(this).parent().parent().parent();
     if(value == '' || value == 'undefined') {
       $('h4',element).html('<span>- Undefined -</span>');
     } else {
@@ -116,6 +113,10 @@ $(function(){
     var alpha_layouts_alpha_default_wide_responsive = $("input[name='alpha_layouts_alpha_default_wide_responsive']").val();
     var alpha_layouts_alpha_default_wide_weight = $("select[name='alpha_layouts_alpha_default_wide_weight']").val();
     var alpha_layouts_alpha_default_wide_media = $("input[name='alpha_layouts_alpha_default_wide_media']").val();
+    var alpha_primary_alpha_fluid = $("select[name='alpha_primary_alpha_fluid']").val();
+    var alpha_layouts_alpha_fluid_normal_responsive = $("input[name='alpha_layouts_alpha_fluid_normal_responsive']").val();
+    var alpha_layouts_alpha_fluid_normal_weight = $("select[name='alpha_layouts_alpha_fluid_normal_weight']").val();
+    var alpha_layouts_alpha_fluid_normal_media = $("input[name='alpha_layouts_alpha_fluid_normal_media']").val();
     
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
@@ -161,16 +162,16 @@ $(function(){
     txt = txt + "settings[alpha_layouts_alpha_default_wide_responsive] = '"+alpha_layouts_alpha_default_wide_responsive+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_wide_weight] = '"+alpha_layouts_alpha_default_wide_weight+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_default_wide_media] = '"+alpha_layouts_alpha_default_wide_media+"'\n";
+    txt = txt + "settings[alpha_primary_alpha_fluid] = '"+alpha_primary_alpha_fluid+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_responsive] = '"+alpha_layouts_alpha_fluid_normal_responsive+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_weight] = '"+alpha_layouts_alpha_fluid_normal_weight+"'\n";
+    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_media] = '"+alpha_layouts_alpha_fluid_normal_media+"'\n";
     
     
     
     
     
     
-    txt = txt + "settings[alpha_primary_alpha_fluid] = 'normal'\n";
-    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_responsive] = '0'\n";
-    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_weight] = '0'\n";
-    txt = txt + "settings[alpha_layouts_alpha_fluid_normal_media] = 'all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)'\n";
     txt = txt + "settings[alpha_libraries][omega_formalize] = 'omega_formalize'\n";
     txt = txt + "settings[alpha_libraries][omega_mediaqueries] = 'omega_mediaqueries'\n";
     txt = txt + "settings[alpha_libraries][omega_equalheights] = '0'\n";

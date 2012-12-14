@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Omega Theme .info Generator</title>
+<title>Drupal Omega Theme .info Generator</title>
 <meta name="description" content="A simple generator for .info files for Drupal child themes using the Omega parent theme.">
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="assets/css/screen.css">
@@ -14,8 +14,9 @@
 <body>
 <div class="container">
   <p class="chromeframe alert">You are using an <strong>outdated</strong> browser. This page may not work/look as intended. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-  <h1>~ Omega Theme .info Generator ~</h1>
+  <h1>~ Drupal Omega Theme .info Generator ~</h1>
   <h2>Use the form below to build then generate your custom Omega child theme's .info file.</h2>
+  <p class="sinfo">This Omega theme .info generator has been built and tested for <a href="http://drupal.org/">Drupal 7</a> using <a href="http://drupal.org/project/omega">Omega 3.1</a>.</p>
   <h3 class="section">Theme Settings</h3>
   <div class="section-box">
     <div class="standard-fields">
@@ -126,7 +127,7 @@
       <h4>Grid System</h4>
       <div class="field">
         <label for="alpha_grid" data-description="Select the grid system that you want to use for this layout." class="tooltip">Grid System</label>
-        <select name="alpha_grid" id="alpha_viewport_initial_scale">
+        <select name="alpha_grid" id="alpha_grid">
           <option value="alpha_default" selected="selected">Default (960px)</option>
           <option value="alpha_fluid">Fluid</option>
         </select>
@@ -374,6 +375,53 @@
         <label for="alpha_layouts_alpha_default_wide_media" data-description="The @media query that the Wide layout should respond to." class="tooltip">Media Query</label>
         <input type="text" name="alpha_layouts_alpha_default_wide_media" id="alpha_layouts_alpha_default_wide_media" value="all and (min-width: 1220px)">
       </div>
+      <div class="clear"></div>
+      <h5>Fluid Layout Settings</h5>
+      <div class="field">
+        <label for="alpha_primary_alpha_fluid" data-description="The primary layout will be used in case you disable the 'responsive grid' option as well as for older versions of Internet Explorer." class="tooltip">Primary Layout</label>
+        <select name="alpha_primary_alpha_fluid" id="alpha_primary_alpha_fluid">
+          <option value="normal" selected="selected">Normal</option>
+        </select>
+      </div>
+      <div class="clear"></div>
+      <h6>Normal Layout</h6>
+      <div class="field">
+        <label for="alpha_layouts_alpha_fluid_normal_responsive" data-description="If enabled, use this layout with the responsive grid." class="tooltip">Use this layout with the responsive grid</label>
+        <input type="text" name="alpha_layouts_alpha_fluid_normal_responsive" id="alpha_layouts_alpha_fluid_normal_responsive" value="0">
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_fluid_normal_weight" data-description="The weight of this layout." class="tooltip">Weight</label>
+        <select name="alpha_layouts_alpha_fluid_normal_weight" id="alpha_layouts_alpha_fluid_normal_weight">
+          <option value="-10">-10</option>
+          <option value="-9">-9</option>
+          <option value="-8">-8</option>
+          <option value="-7">-7</option>
+          <option value="-6">-6</option>
+          <option value="-5">-5</option>
+          <option value="-4">-4</option>
+          <option value="-3">-3</option>
+          <option value="-2">-2</option>
+          <option value="-1">-1</option>
+          <option value="0" selected="selected">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="alpha_layouts_alpha_fluid_normal_media" data-description="The @media query that the Normal layout should respond to." class="tooltip">Media Query</label>
+        <input type="text" name="alpha_layouts_alpha_fluid_normal_media" id="alpha_layouts_alpha_fluid_normal_media" value="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
+      </div>
+      <div class="clear"></div>
+      <h4>Toggle Libraries</h4>
+      <div class="alert"><strong>Notice:</strong> Not all Omega theme settings are currently available to edit using this interface, however those settings are included and set to their defaults in the generated code.</div>
     </div>
   </div>
   <hr>
@@ -457,9 +505,8 @@
   <hr>
   <a href="#" class="generate btn fright">Generate</a>
   <h3>Theme .info File</h3>
-  <div class="alert"><strong>Notice:</strong> Not all Omega theme settings are currently available to edit using this interface, however those settings are included and set to their defaults in the generated code.</div>
   <p>Click the 'Generate' button to view your theme's .info file built based on the options above. Copy and paste this content in your Omega theme's .info file.</p>
-  <textarea id="output" style="width:100%; height: 400px;"></textarea>
+  <textarea id="output" style="width:100%; height: 400px;" readonly="readonly"></textarea>
   <p class="copyright">Built by <a href="http://www.benmarshall.me">Ben Marshall</a>.</p>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
