@@ -52,7 +52,7 @@ li .inner .tt {top:5px;left:5px;width:296%}
 .required label:after{color:#d90000;content: " required";}
 .recommended label:after { content: " recommended"; color:#0678BE}
 .info{font-size:14px;line-height:22px}
-.chromeframe{display:n/one}
+.chromeframe{display:none}
 .lt-ie9 .chromeframe{display:block}
 @media screen and (max-width : 1320px) {
   li{width: 48.8%}
