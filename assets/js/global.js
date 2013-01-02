@@ -36,7 +36,7 @@ $(function(){
   $('.remove-region').live('click',function(e) {
     e.preventDefault();
     var count = $("#regions li").length;
-    if(count > 1) {
+    if(count > 2) {
        $("#regions li:last-child").slideUp('fast', function(){
         $(this).remove();
         $("#regions li:last-child h4").click();
@@ -68,7 +68,7 @@ $(function(){
   $('.generate').live('click',function(e) {
     e.preventDefault();
     var txt = '';
-    
+
     var theme_name = $("input[name='theme_name']").val();
     var theme_description = $("input[name='theme_description']").val();
     var core = $("input[name='core']").val();
@@ -117,7 +117,7 @@ $(function(){
     var alpha_layouts_alpha_fluid_normal_responsive = $("input[name='alpha_layouts_alpha_fluid_normal_responsive']").val();
     var alpha_layouts_alpha_fluid_normal_weight = $("select[name='alpha_layouts_alpha_fluid_normal_weight']").val();
     var alpha_layouts_alpha_fluid_normal_media = $("input[name='alpha_layouts_alpha_fluid_normal_media']").val();
-    
+
     txt = txt + "name = '"+theme_name+"'\n";
     txt = txt + "description = '"+theme_description+"'\n";
     txt = txt + "core = '"+core+"'\n";
@@ -166,12 +166,12 @@ $(function(){
     txt = txt + "settings[alpha_layouts_alpha_fluid_normal_responsive] = '"+alpha_layouts_alpha_fluid_normal_responsive+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_fluid_normal_weight] = '"+alpha_layouts_alpha_fluid_normal_weight+"'\n";
     txt = txt + "settings[alpha_layouts_alpha_fluid_normal_media] = '"+alpha_layouts_alpha_fluid_normal_media+"'\n";
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     txt = txt + "settings[alpha_libraries][omega_formalize] = 'omega_formalize'\n";
     txt = txt + "settings[alpha_libraries][omega_mediaqueries] = 'omega_mediaqueries'\n";
     txt = txt + "settings[alpha_libraries][omega_equalheights] = '0'\n";
@@ -244,7 +244,7 @@ $(function(){
     txt = txt + "settings[alpha_hidden_title] = '0'\n";
     txt = txt + "settings[alpha_hidden_site_name] = '0'\n";
     txt = txt + "settings[alpha_hidden_site_slogan] = '0'\n";
-    
+
     $('#zones li').each(function() {
       var key = $("input[name='key']", this).val();
       var name = $("input[name='name']", this).val();
@@ -258,7 +258,7 @@ $(function(){
       var css = $("input[name='css']", this).val();
       var wrapper_css = $("input[name='wrapper_css']", this).val();
       var equal_height_container = $("input[name='equal_height_container']", this).val();
-      
+
       txt = txt + "zones["+key+"] = '"+name+"'\n";
       txt = txt + "settings[alpha_zone_"+key+"_wrapper] = '"+wrapper+"'\n";
       txt = txt + "settings[alpha_zone_"+key+"_force] = '"+display+"'\n";
@@ -270,9 +270,9 @@ $(function(){
       txt = txt + "settings[alpha_zone_"+key+"_css] = '"+css+"'\n";
       txt = txt + "settings[alpha_zone_"+key+"_wrapper_css] = '"+wrapper_css+"'\n";
       txt = txt + "settings[alpha_zone_"+key+"_equal_height_container] = '"+equal_height_container+"'\n";
-      
+
     });
-    
+
     $('#regions li').each(function() {
       var key = $("input[name='key']", this).val();
       var name = $("input[name='name']", this).val();
@@ -286,7 +286,7 @@ $(function(){
       var css = $("input[name='css']", this).val();
       var equal_height_element = $("input[name='equal_height_element']", this).val();
       var equal_height_container = $("input[name='equal_height_container']", this).val();
-      
+
       txt = txt + "regions["+key+"] = '"+name+"'\n";
       txt = txt + "settings[alpha_region_"+key+"_force] = '"+display+"'\n";
       txt = txt + "settings[alpha_region_"+key+"_zone] = '"+zone+"'\n";
