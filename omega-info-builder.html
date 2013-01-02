@@ -470,6 +470,36 @@
   <a href="#" class="new-region btn fright">Add</a>
   <h3>Configure Regions</h3>
   <ul id="regions">
+    <li>
+      <div class="inner">
+        <h4 class="box-title"><span>- Content -</span></h4>
+        <div class="fields">
+          <div class="field required"><label class="tooltip" data-description="Enter the region's unique key value.">Region Key</label>
+          <input type="text" value="content" name="key" readonly="readonly"></div>
+          <div class="field required"><label class="tooltip" data-description="Enter the region's name.">Region Name</label>
+          <input type="text" value="Content" name="name" class="box-name" readonly="readonly"></div>
+          <div class="field"><label class="tooltip" data-description="Enabling this will always render this region, even if it is empty.">Force Display</label>
+          <input type="text" value="" name="display" /></div>
+          <div class="field"><label class="tooltip" data-description="Defines which zone a region will be in. To move a region to a different zone, choose the desired zone name.">Zone Key</label>
+          <input type="text" value="" name="zone" /></div>
+          <div class="field"><label class="tooltip" data-description="Choose the number of empty columns that should appear before this region.">Prefix</label>
+          <input type="text" value="0" name="prefix" /></div>
+          <div class="field"><label class="tooltip" data-description="Choose the number of empty columns that should appear after this region.">Suffix</label>
+          <input type="text" value="0" name="suffix" /></div>
+          <div class="field"><label class="tooltip" data-description="This allows you to manipulate the placing of the regions in this zone. To adjust the region position, go to the Configuration settings for the Zone, and check the box next to 'Customize the region positioning'.<br><br>Positioning means that if your current site displays the 'Sidebar First Region' on the left and the 'Content Region' on the right but you'd like to swap the two, you'll need to give the 'Content Region' a lower position number. I.E., 'Content Region' should have a position setting of -10, and the 'Sidebar First Region' should have a position setting of 5.">Position</label>
+          <input type="text" value="0" name="position" /></div>
+          <div class="field"><label class="tooltip" data-description="Choose the desired number of columns for the region. Default options are 12, 16, and 24. Each region defines its own column count, which means you can use a different number of columns for each region on the page.">Columns</label>
+          <input type="text" value="" name="columns" /></div>
+          <div class="field"><label class="tooltip" data-description="Defines where the region will be placed within the zone. To move a region, choose a new weight. Regions are ordered from lowest number to highest. Weight comes into play when you view your site in a mobile device (or your browser window is set to a smaller width) and the regions begin stacking vertically. When the regions begin to stack vertically, the region with the least weight will float to the top, while the region with the most weight will sink to the bottom. I.E.: If the 'Sidebar First Region' has a weight of -5, and the 'Content Region' has a weight of 10, when the window is collapsed to the mobile size the 'Sidebar First Region' will be at the top of that zone, and the 'Content Region' will be at the bottom.">Weight</label>
+          <input type="text" value="" name="weight" /></div>
+          <div class="field"><label class="tooltip" data-description="Enter any CSS classes to be added to the region for theming.">CSS</label>
+          <input type="text" value="" name="css" /></div>
+          <div class="field"><label>= Height Ele.</label>
+          <input type="text" value="0" name="equal_height_element" /></div>
+          <div class="field"><label>= Height Con.</label>
+          <input type="text" value="0" name="equal_height_container" /></div>
+        </div>
+      </div>
     <li id="region-template">
       <div class="inner">
         <h4 class="box-title"><span>- Untitled -</span></h4>
